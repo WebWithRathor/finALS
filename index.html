@@ -11,48 +11,42 @@
 
 <body>
     <div class="main">
-        <div class="landingPage relative h-[200vh] bg-black">
+        <div class="fixed w-full py-[2vw] px-[4vw] justify-between flex items-center">
+            <h1 class="font-[handjet] font-black text-xl">IDM-VTON</h1>
+            <div class="flex gap-10 uppercase">
+                <h2>Home</h2>
+                <h2>Docs</h2>
+                <h2>Features</h2>
+                <h2>Team</h2>
+            </div>
+        </div>
+        <div class="landingPage relative h-[200vh] ">
             <div class="sticky top-0 h-screen bg-transparent overflow-hidden">
-                <div
-                    class="frontPage overflow-hidden relative h-screen w-full flex flex-col px-5 lg:px-10 items-center justify-center gap-5">
+                <div class="frontPage overflow-hidden relative h-screen w-full px-[4vw] flex flex-col py-[6vw]  justify-between gap-5">
 
-                    <div class="brain h-screen w-full absolute">
-                        <div class="logoHidder"></div>
-                        <spline-viewer
-                            url="https://prod.spline.design/Gdg6ZlEvzMfChQK6/scene.splinecode"></spline-viewer>
+                    <p class=" text-[5vw] w-[50%] leading-none mt-10">Your Virtual Dressing Room, Anytime Anywhere</p>
+                    <div class="self-end flex flex-col">
+                        <button class="border-2 md:px-10 rounded-sm md:py-2 border-black/[.8] text-3xl ml-auto self-end font-[handjet]"> Start Demo</button>
+                        <p class=" text-[5vw]  leading-none self-end text-right">Try It Before You Buy It</p>
                     </div>
-
-                    <h1
-                        class="main-text pointer-events-none z-[5] px-5 md:px-10 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-[handjet] leading-none text-[26vw] w-full flex items-center justify-center">
-                        <span class="font-[handjet] font-black tracking-wider text-white/[.4]">IDM</span>
-                        <span class="font-[handjet] font-black tracking-wider text-white/[.4]">-</span>
-                        <span class="font-[handjet] font-black tracking-wider text-white/[.4]">VTON</span>
+                    
+                    <div id="glitchImgs" class="absolute w-full h-full justify-center items-center flex z-[-1] top-0 left-1/2 -translate-x-1/2">
+                        <img id="img4" class="absolute g-img opacity-0  h-full object-top" src="./assets/images/model1_swim-removebg-preview.png" alt="">
+                        <img id="img3" class="absolute g-img opacity-0  h-full object-top" src="./assets/images/model1_brown_jac-removebg-preview.png" alt="">
+                        <img id="img2" class="absolute g-img opacity-0  h-full object-top" src="./assets/images/model1.png" alt="">
+                        <img id="img1" class="absolute g-img opacity-0  h-full object-top" src="./assets/images/model1_brown_fur-removebg-preview.png" alt="">
+                    </div>
+                    
+                    <h1 class="main-text pointer-events-none z-[5] px-5 md:px-10 absolute hidden left-1/2 top-1/2 -translate-x-1/2 -translate-y-[40%] font-[handjet] leading-none text-[26vw] w-full flex items-center justify-center">
+                        <span class="font-[handjet] font-black tracking-wider text-black/[1]">IDM</span>
+                        <span class="font-[handjet] font-black tracking-wider text-black/[1]">-</span>
+                        <span class="font-[handjet] font-black tracking-wider text-black/[1]">VTON</span>
                     </h1>
-                    <div id="transition-circle"
-                        class="absolute pointer-events-none top-1/2 left-1/2 -translate-x-1/2  origin-center  bg-white w-[2vw] aspect-square z-[99]">
-                    </div>
-                    <!-- <div class="center-box bg-black absolute left-[47%] top-[52%] md:top-[55%]   aspect-video w-[1vw] md:w-[1vw]"></div> -->
-                    <p class="text-center hidden text-sm w-3/4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Ex consequuntur laudantium obcaecati minima qui earum officia consequatur, laboriosam libero
-                        sequi. Cum dolore earum, dolorem voluptatem hic totam sapiente non iste, architecto, alias
-                        aspernatur quasi assumenda.</p>
+                    <div id="transition-circle" class="absolute pointer-events-none top-1/2 left-1/2 -translate-x-1/2  origin-center  bg-black w-[2vw] aspect-square z-[99]"></div>
+                    <p class="text-center hidden text-sm w-3/4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex consequuntur laudantium obcaecati minima qui earum officia consequatur, laboriosam libero sequi. Cum dolore earum, dolorem voluptatem hic totam sapiente non iste, architecto, alias aspernatur quasi assumenda.</p>
                 </div>
-                <div id="introContent"
-                    class="w-full h-screen absolute z-[99] md:px-[10px] flex justify-center items-center top-0 left-0 bg-white">
-                    <p class="font-[handjet] text-[10vw] text-center leading-none ">Your Virtual Dressing Room, Anytime
-                        Anywhere</p>
-
-                    <div id="glitchImgs"
-                        class="absolute w-full h-full justify-center items-center flex z-[-1] top-0 left-1/2 -translate-x-1/2">
-                        <img id="img4" class="absolute g-img opacity-0  h-full object-top"
-                            src="./assets/images/model1_swim-removebg-preview.png" alt="">
-                        <img id="img3" class="absolute g-img opacity-0  h-full object-top"
-                            src="./assets/images/model1_brown_jac-removebg-preview.png" alt="">
-                        <img id="img2" class="absolute g-img opacity-0  h-full object-top"
-                            src="./assets/images/model1.png" alt="">
-                        <img id="img1" class="absolute g-img opacity-0  h-full object-top"
-                            src="./assets/images/model1_brown_fur-removebg-preview.png" alt="">
-                    </div>
+                <div id="introContent" class="w-full h-screen absolute  z-[99] md:px-[6vw] py-[6vw] flex flex-col justify-between  top-0 left-0 bg-black">
+                    
                 </div>
 
             </div>
@@ -71,12 +65,9 @@
             </div>
         </div>
         <div class="minimap-wrapper h-[300vh] relative w-full ">
-            <div
-                class="minimap sticky top-0 overflow-hidden h-screen flex w-full p-5 gap-5  md:px-32 md:py-20 md:gap-20">
-                <div class="virtual-photu top-0 left-0 absolute h-screen z-[9] bg-white w-full p-10 flex items-center">
-                    <h1 class="font-[anton]  text-[20vw] md:text-[10vw] md:leading-[22vh] leading-[11vh]">Your <span
-                            class="font-medium tracking-tight"> Virtual <br> </span>Dressing Room, <br> Anytime <br>
-                        Anywhere</h1>
+            <div class="minimap sticky top-0 overflow-hidden h-screen flex w-full p-5 gap-5  md:px-32 md:py-20 md:gap-20">
+                <div class="virtual-photu top-0 left-0 absolute h-screen z-[9]  w-full p-10 flex items-center">
+                    <h1 class="font-[anton]  text-[20vw] md:text-[10vw] md:leading-[22vh] leading-[11vh]">Explore The <br> Try-On Gallery</h1>
                 </div>
                 <div class="details absolute md:w-[20vw] bottom-10 font-[anton] right-10 text-right">
                     <h1 class="text-4xl mb-5">Virtual Try-on <br> in the Wild</h1>
@@ -173,7 +164,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
         integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.23/build/spline-viewer.js"></script>
+        <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.23/build/spline-viewer.js"></script> -->
     <script src="script.js"></script>
 </body>
 
