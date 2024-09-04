@@ -51,7 +51,7 @@ function footerAnimation() {
             start: 'top 20%',
             end: '10% top',
             scrub: 2,
-            markers: true,
+            // markers: true,.
         }
     })
 }
