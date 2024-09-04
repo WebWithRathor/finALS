@@ -17,7 +17,7 @@ gsap.fromTo('.step3 img',{
 
 function magneticHover(){
     document.querySelectorAll('.magnet-hover').forEach((elem)=>{
-        
+            
         elem.addEventListener("mousemove", (e) => {
             let x = e.offsetX;
             let y = e.offsetY;

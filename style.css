@@ -16,5 +16,5 @@ html, body{
 
 .magnet-hover{
     cursor: pointer;
-    transition: all .25s;
+    transition: all .5s;
 }
