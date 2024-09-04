@@ -24,11 +24,18 @@ function introAnimation(){
             gsap.to('.intro-page', {
                 delay: 1.2,
                 color: 'black',
+                stroke:'#000',
                 backgroundColor: 'white',
-            })
+            },"a")
+            gsap.to('svg #text text', {
+                delay: 1.2,
+                // color: 'black',
+                stroke:'#000',
+                backgroundColor: 'white',
+            },"a")
             gsap.to('.center-text', {
                 delay: 1.2,
-                fontSize: "10vw",
+                fontSize: "26vw",
                 ease: "bounce.out",
             })
         }
