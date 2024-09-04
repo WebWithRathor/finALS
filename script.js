@@ -401,11 +401,11 @@ function stepCanvas() {
     const context = canvas.getContext("2d");
 
     canvas.width = window.innerWidth/2;
-    canvas.height = window.innerHeight/.5;
+    canvas.height = window.innerHeight/1.7;
 
 
     window.addEventListener("resize", function () {
-        canvas.width = window.innerWidth/2;
+        canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
         render();
     });
