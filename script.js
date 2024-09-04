@@ -508,3 +508,59 @@ function setupCanvas() {
 }
 }
 cursor();
+
+
+
+function openCloseMenu() {
+    let isOpen = false;
+    document.querySelector('#menu-icon').addEventListener('click', () => {
+        console.log("hey")
+      if (!isOpen) {
+        const tl = gsap.timeline()
+        tl.to('.menu-scroll', {
+          opacity: 1,
+          duration: 0.8
+        }, 'x')
+          .to('.menu-left', {
+            transform: 'translate(0%)',
+            duration: .8,
+            opacity: 1
+          }, 'x')
+          .to('.menu-right', {
+            transform: 'translate(0%)',
+            duration: .8,
+            opacity: 1
+          }, 'x')
+          .to('.menu-page', {
+            top: '0%',
+            duration: .6
+          }, 'x')
+          isOpen = true;
+      } else {
+        const tl = gsap.timeline()
+        tl.to('.menu-scroll', {
+          // opacity: 0,
+          duration: 0.8
+        }, 'x')
+          .to('.menu-left', {
+            transform: 'translate(-100%)',
+            duration: .8,
+            opacity: 0
+          }, 'x')
+          .to('.menu-right', {
+            transform: 'translate(100%)',
+            duration: .8,
+            opacity: 0
+          }, 'x')
+          .to('.menu-page', {
+            top: '-120%',
+            duration: .6
+          }, 'x')
+          isOpen = false;
+  
+      }
+  
+    })
+  }
+
+  openCloseMenu()
