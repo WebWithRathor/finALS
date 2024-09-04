@@ -70,7 +70,7 @@ function footerAnimation() {
     const letters = large_text.textContent.split('')
     let clutter = "";
     letters.forEach(e => {
-        clutter += `<span class="">${e}</span>`;
+        clutter += `<span class="text-transparent bgImg">${e}</span>`;
     })
     large_text.innerHTML = clutter;
     gsap.set('#idm-vton span', { display: 'inline-block' })
