@@ -1,46 +1,117 @@
-const tl = gsap.timeline({
-    scrollTrigger: {
-        scroller: 'body',  // Corrected 'scoller' to 'scroller'
-        trigger: '.circlePage',
-        start: 'top -1%',
-        end: 'top -150%',
-        markers: true,  // Corrected 'marksers' to 'markers'
-        scrub:1,
-    }
-});
+function circlePageAnime(){
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            scroller: 'body',  // Corrected 'scoller' to 'scroller'
+            trigger: '.circlePage',
+            start: 'top -1%',
+            end: 'top -150%',
+            markers: true,  // Corrected 'marksers' to 'markers'
+            scrub:1,
+        }
+    });
+    
+    tl.to('.circleDiv img', {
+        scale:3
+    },'a')
+    .to('.circleDiv', {
+        delay:.1,
+        height:'510vh',
+        width:'510vh',
+    },'a')
+    .to('.circleDiv', {
+        right:'50%',
+    },'a')
+    .from('.leftText', {
+        width:0,
+    },'a')
+    .from('.leftText h1', {
+        left:'200%',
+    },'a')
+    .from('.rightText', {
+        width:0,
+    },'a')
+    .from('.rightText h1', {
+        left:'-300%',
+    },'a')
+    
+    .to('.circleDiv', {
+        right:'80%',
+    },'b')
+    .to('.circleDiv img', {
+        scale:3.5
+    },'b')
+    .from('.ourMission', {
+        opacity:0,
+        right:'10%'
+    },'b')
+    
+    
+}
+function circlePageAnimeResponsive(){
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            scroller: 'body',  // Corrected 'scoller' to 'scroller'
+            trigger: '.circlePage',
+            start: 'top -1%',
+            end: 'top -150%',
+            markers: true,  // Corrected 'marksers' to 'markers'
+            scrub:1,
+        }
+    });
+    
+    tl.to('.circleDiv img', {
+        scale:3
+    },'a')
+    .to('.circleDiv', {
+        delay:.1,
+        height:'210vh',
+        width:'210vh',
+    },'a')
+    .to('.circleDiv', {
+        right:'50%',
+    },'a')
+    .from('.leftText', {
+        width:0,
+    },'a')
+    .from('.leftText h1', {
+        left:'00%',
+    },'a')
+    .from('.rightText', {
+        width:0,
+    },'a')
+    .from('.rightText h1', {
+        left:'-100%',
+    },'a')
+    
+    .to('.circleDiv', {
+        right:'60%',
+    },'b')
+    .to('.circleDiv img', {
+        scale:1.5,
+        marginTop:'-35vh',
+        marginLeft:'-5vh',
 
-tl.to('.circleDiv img', {
-    scale:3
-},'a')
-.to('.circleDiv', {
-    delay:.1,
-    height:'510vh',
-    width:'510vh',
-},'a')
-.to('.circleDiv', {
-    right:'50%',
-},'a')
-.from('.leftText', {
-    width:0,
-},'a')
-.from('.leftText h1', {
-    left:'200%',
-},'a')
-.from('.rightText', {
-    width:0,
-},'a')
-.from('.rightText h1', {
-    left:'-300%',
-},'a')
+    },'b')
 
-.to('.circleDiv', {
-    right:'80%',
-},'b')
-.to('.circleDiv img', {
-    scale:3.5
-},'b')
-.from('.ourMission', {
-    opacity:0,
-    right:'10%'
-},'b')
+    .to('.rightText',{
+        left:'37%',
+        top:'40%'
+    },'b')
+    .to('.leftText',{
+        left:'30%'
+    },'b')
 
+    .from('.ourMission', {
+        opacity:0,
+        right:'10%'
+    },'b')
+    
+    
+}
+
+if(window.innerWidth > 600){
+    circlePageAnime();
+}
+else{
+    circlePageAnimeResponsive();
+}
