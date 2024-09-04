@@ -1,0 +1,12 @@
+document.querySelector('.open').addEventListener('click',()=>{
+    gsap.to('.tryPage',{
+        scale:1,
+        opacity:1
+    })
+})
+document.querySelector('.close').addEventListener('click',()=>{
+    gsap.to('.tryPage',{
+        scale:0,
+        opacity:0
+    })
+})

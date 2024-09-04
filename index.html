@@ -5,23 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
     <link rel="stylesheet" href="style.css">
 </head>
 
+<!--  -->
 <body>
     <div class="main">
-        <div class="frontPage h-screen w-full flex flex-col px-20 items-center gap-5 justify-center">
-            <h1 class="font-[anton] leading-none text-[23vw] whitespace-nowrap">IDM-VTON</h1>
-            <p class="text-center w-3/4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex consequuntur laudantium obcaecati minima qui earum officia consequatur, laboriosam libero sequi. Cum dolore earum, dolorem voluptatem hic totam sapiente non iste, architecto, alias aspernatur quasi assumenda ullam aperiam quidem voluptatum repellendus.</p>
+        <button class="open">Open</button>
+       <div class="tryPage scale-0 fixed top-0 opacity-0  h-screen overflow-hidden overflow-y-auto md:h-screen w-full md:p-16 p-10 gap-4 md:gap-0 bg-black text-zinc-200 flex flex-col md:flex-row justify-between">
+        <div class="close absolute md:top-7 md:right-7 top-2 right-2 cursor-pointer text-white ">
+            <i class="ri-close-large-line text-2xl"></i>
         </div>
+            <div class="md:w-[48%] md:h-full h-[100vh] flex flex-col items-center justify-between">
+                <div class="w-full h-[45vh] bg-zinc-600/[.4] rounded-xl flex justify-center items-center text-2xl font-medium">
+                    <h1 class="w-40 text-center opacity-[.4]">Drop image / click to upload</h1>
+                </div>
+                <div class="py-4 w-full px-2 flex flex-col md:flex-row gap-2 justify-between items-center">
+                    <button class="py-3 px-6 w-full md:w-fit border-zinc-500 border uppercase font-['anton'] text-xl">
+                        Upload Human
+                    </button>
+                    <h1>use example garments</h1>
+                    <button class="py-3 px-6 w-full md:w-fit border-zinc-500 border uppercase font-['anton'] text-xl">
+                        Upload garments
+                    </button>
+
+                </div>
+                <div class="w-full h-[45vh] bg-zinc-600/[.4] rounded-xl flex justify-center items-center text-2xl font-medium">
+                    <h1 class="w-40 text-center opacity-[.4]">Drop image / click to upload</h1>
+                </div>
+            </div>
+            <div class="md:w-[48%] md:h-full h-[100vh] flex flex-col items-center justify-between gap-6">
+                <div class="w-full h-[85%] bg-zinc-600/[.4] rounded-xl flex justify-center items-end text-2xl font-medium">
+                    <img class="opacity-[.5] h-[85%] object-cover" src="./assets/images/ae7f090d8c65206e2cc207a3c8c73b6d.png" alt="">
+                </div>
+                <button class="py-3 px-6 w-full border-zinc-500 border uppercase font-['anton'] text-xl">
+                    Try on
+                </button>
+            </div>
+       </div>
+    
     </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
 </body>
 
