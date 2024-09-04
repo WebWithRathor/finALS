@@ -123,35 +123,14 @@ function imgGlitchEffect() {
 
     tl
         .to('#img1', {
-            opacity: 1,
-            duration: 1,
-        })
-        .to('#img1', {
             opacity: 0,
-            // duration: 1,
-        }, "i0")
-
+            duration: 1,
+        },'i0')
         .to('#img2', {
             opacity: 1,
             duration: 1,
         }, "i0")
-        .to('#img2', {
-            opacity: 0,
-            // duration: 1,
-        }, "i1")
-
-        .to('#img3', {
-            opacity: 1,
-            duration: 1,
-        }, "i1")
-        .to('#img3', {
-            opacity: 0,
-            // duration: 1,
-        })
-
-
-
-
+        
 }
 imgGlitchEffect()
 
