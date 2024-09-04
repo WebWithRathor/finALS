@@ -9,30 +9,30 @@ function landingPageAnimation() {
         }
     })
     tl.from('#transition-circle', {
-            top: '150%',
-            rotate: 4 * 360,
-            scale: 0,
-        }, 'a')
+        top: '150%',
+        rotate: 4 * 360,
+        scale: 0,
+    }, 'a')
         .to('.main-text', {
             left: '5rem',
             top: '2rem',
             fontSize: '2rem',
         }, 'a')
         .to('#transition-circle', {
-            scaleY:28,
+            scaleY: 28,
             scale: 1,
             duration: .5
         }, '.2+a')
-        .to('#transition-circle',{
-            opacity:0,
-            duration:.1
-        },"qum")
+        .to('#transition-circle', {
+            opacity: 0,
+            duration: .1
+        }, "qum")
         .to("#introContent", {
             clipPath: "polygon(0% 0%,100% 0%, 100% 100%, 0% 100% )"
-        },"qum")
-        // .from("#glitchImgs", {
-        //     y:200,
-        // },"qum")
+        }, "qum")
+    // .from("#glitchImgs", {
+    //     y:200,
+    // },"qum")
 
 
 
@@ -89,12 +89,12 @@ function footerAnimation() {
     })
     gsap.to('.top-section, .middle-text', {
         transform: 'translateY(0)',
-        duration : 1,
-        scrollTrigger:{
-            trigger : 'footer',
-            start : 'top 20%',
-            end : '10% top',
-            scrub : true,
+        duration: 1,
+        scrollTrigger: {
+            trigger: 'footer',
+            start: 'top 20%',
+            end: '10% top',
+            scrub: true,
         }
     }, 'b')
 }
@@ -138,7 +138,7 @@ function imgGlitchEffect() {
             // duration: 1,
         })
 
-       
+
 
 
 }
@@ -188,202 +188,178 @@ function minmap() {
 
 minmap();
 
-function textHover(){
+function textHover() {
     const texts = document.querySelectorAll('.text-hover');
+    texts.forEach((elem) => {
 
-texts.forEach(e => {
-    var clutter = '';
-
-    e.textContent.trim().split('').forEach(letter => {
-        if (letter == ' ') {
-            clutter += `<span class='letter font-[900]'>&nbsp;</span>`;
-            return
-        };
-        clutter += `<span class='letter font-[900]'>${letter}</span>`;
-    });
-    e.innerHTML = clutter;
-    // console.log(e);
-
-    let isAnimating = false;
-    e.addEventListener('mouseenter', function () {
-        if (!isAnimating) {
-            isAnimating = true;
-                gsap.to(e.querySelectorAll('span'), {
-                    fontWeight: 100,
-                    transform: 'scale(1, .4)',
-                    stagger: 0.1,
-                    duration:.5,
-                    onStart: () => {
-                        gsap.to(e.querySelectorAll('span'), {
-                            delay:0.6,
-                            stagger: 0.1,
-                            duration:.5,
-                            fontWeight: 900,
-                            transform: 'scale(1, 1)',
-                        });
-                    }
-                });
-
-            setTimeout(() => {
-                isAnimating = false;
-            }, 1000);
-        }
-    });
-});
+        elem.addEventListener("mousemove", (e) => {
+            let x = e.offsetX;
+            let y = e.offsetY;
+            let btnWidth = elem.offsetWidth / 2;
+            let btnHeight = elem.offsetHeight / 2;
+            let tranX = x - btnWidth;
+            let tranY = y - btnHeight;
+            elem.style.transform = `translateX(${tranX}px) translateY(${tranY}px)`;
+        });
+        elem.addEventListener("mouseout", () => {
+            elem.style.transform = 'translate(0,0)';
+        });
+    })
 
 }
+    
 
 textHover();
 
-function skewEffect(){
+function skewEffect() {
     let skewTime;
 
-    gsap.to('.skew-bar h1',{
-        translateX : '-100%',
-        repeat:-1,
-        ease:'linear',
-        duration:5,
+    gsap.to('.skew-bar h1', {
+        translateX: '-100%',
+        repeat: -1,
+        ease: 'linear',
+        duration: 5,
     })
 
-    window.addEventListener('mousemove',(e)=>{
+    window.addEventListener('mousemove', (e) => {
         clearTimeout(skewTime)
-        if(e.movementX > 0){
-            gsap.to('.skew-bar h1',{
-                skewX : '-5deg'
+        if (e.movementX > 0) {
+            gsap.to('.skew-bar h1', {
+                skewX: '-5deg'
             })
-           
+
         }
-        else{
-            gsap.to('.skew-bar h1',{
-                skewX : '5deg'
+        else {
+            gsap.to('.skew-bar h1', {
+                skewX: '5deg'
             })
         }
-        skewTime = setTimeout(()=>{
-            gsap.to('.skew-bar h1',{
-                skewX : '0deg'
+        skewTime = setTimeout(() => {
+            gsap.to('.skew-bar h1', {
+                skewX: '0deg'
             })
-        },100)
+        }, 100)
     })
 }
 
 skewEffect();
 
 
-function circleAnime(){
-    
-    function circlePageAnime(){
+function circleAnime() {
+
+    function circlePageAnime() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 scroller: 'body',  // Corrected 'scoller' to 'scroller'
                 trigger: '.circlePage',
                 start: 'top -1%',
                 end: 'top -150%',
-                scrub:1,
+                scrub: 1,
             }
         });
-        
+
         tl.to('.circleDiv img', {
-            scale:3
-        },'a')
-        .to('.circleDiv', {
-            delay:.1,
-            height:'510vh',
-            width:'510vh',
-        },'a')
-        .to('.circleDiv', {
-            right:'50%',
-        },'a')
-        .from('.leftText', {
-            width:0,
-        },'a')
-        .from('.leftText h1', {
-            left:'200%',
-        },'a')
-        .from('.rightText', {
-            width:0,
-        },'a')
-        .from('.rightText h1', {
-            left:'-300%',
-        },'a')
-        
-        .to('.circleDiv', {
-            right:'80%',
-        },'b')
-        .to('.circleDiv img', {
-            scale:3.5
-        },'b')
-        .from('.ourMission', {
-            opacity:0,
-            right:'10%'
-        },'b')
-        
-        
+            scale: 3
+        }, 'a')
+            .to('.circleDiv', {
+                delay: .1,
+                height: '510vh',
+                width: '510vh',
+            }, 'a')
+            .to('.circleDiv', {
+                right: '50%',
+            }, 'a')
+            .from('.leftText', {
+                width: 0,
+            }, 'a')
+            .from('.leftText h1', {
+                left: '200%',
+            }, 'a')
+            .from('.rightText', {
+                width: 0,
+            }, 'a')
+            .from('.rightText h1', {
+                left: '-300%',
+            }, 'a')
+
+            .to('.circleDiv', {
+                right: '80%',
+            }, 'b')
+            .to('.circleDiv img', {
+                scale: 3.5
+            }, 'b')
+            .from('.ourMission', {
+                opacity: 0,
+                right: '10%'
+            }, 'b')
+
+
     }
-    function circlePageAnimeResponsive(){
+    function circlePageAnimeResponsive() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 scroller: 'body',  // Corrected 'scoller' to 'scroller'
                 trigger: '.circlePage',
                 start: 'top -1%',
                 end: 'top -150%',
-                scrub:1,
+                scrub: 1,
             }
         });
-        
+
         tl.to('.circleDiv img', {
-            scale:3
-        },'a')
-        .to('.circleDiv', {
-            delay:.1,
-            height:'210vh',
-            width:'210vh',
-        },'a')
-        .to('.circleDiv', {
-            right:'50%',
-        },'a')
-        .from('.leftText', {
-            width:0,
-        },'a')
-        .from('.leftText h1', {
-            left:'00%',
-        },'a')
-        .from('.rightText', {
-            width:0,
-        },'a')
-        .from('.rightText h1', {
-            left:'-100%',
-        },'a')
-        
-        .to('.circleDiv', {
-            right:'60%',
-        },'b')
-        .to('.circleDiv img', {
-            scale:1.5,
-            marginTop:'-35vh',
-            marginLeft:'-5vh',
-    
-        },'b')
-    
-        .to('.rightText',{
-            left:'37%',
-            top:'40%'
-        },'b')
-        .to('.leftText',{
-            left:'30%'
-        },'b')
-    
-        .from('.ourMission', {
-            opacity:0,
-            right:'10%'
-        },'b')
-        
-        
+            scale: 3
+        }, 'a')
+            .to('.circleDiv', {
+                delay: .1,
+                height: '210vh',
+                width: '210vh',
+            }, 'a')
+            .to('.circleDiv', {
+                right: '50%',
+            }, 'a')
+            .from('.leftText', {
+                width: 0,
+            }, 'a')
+            .from('.leftText h1', {
+                left: '00%',
+            }, 'a')
+            .from('.rightText', {
+                width: 0,
+            }, 'a')
+            .from('.rightText h1', {
+                left: '-100%',
+            }, 'a')
+
+            .to('.circleDiv', {
+                right: '60%',
+            }, 'b')
+            .to('.circleDiv img', {
+                scale: 1.5,
+                marginTop: '-35vh',
+                marginLeft: '-5vh',
+
+            }, 'b')
+
+            .to('.rightText', {
+                left: '37%',
+                top: '40%'
+            }, 'b')
+            .to('.leftText', {
+                left: '30%'
+            }, 'b')
+
+            .from('.ourMission', {
+                opacity: 0,
+                right: '10%'
+            }, 'b')
+
+
     }
-    
-    if(window.innerWidth > 600){
+
+    if (window.innerWidth > 600) {
         circlePageAnime();
     }
-    else{
+    else {
         circlePageAnimeResponsive();
     }
 }

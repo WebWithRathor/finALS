@@ -59,4 +59,9 @@ html, body{
     position: relative;
 }
 
+.text-hover{
+    transition: all .2s;
+    cursor: pointer;
+}
+
   
