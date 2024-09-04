@@ -12,7 +12,6 @@
     <div class="main">
         <div class="landingPage relative h-[200vh] bg-black">
             <div class="sticky top-0 h-screen bg-transparent overflow-hidden">
-                <div id="introContent" class="w-full h-screen absolute top-0 left-0 bg-white z-50"></div>
                 <div class="frontPage overflow-hidden relative h-screen w-full flex flex-col px-5 lg:px-10 items-center justify-center gap-5">
                     
                     <h1 class="main-text z-[5] px-5 md:px-10 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-[handjet] leading-none text-[26vw] w-full flex items-center justify-center">
@@ -24,14 +23,71 @@
                     <!-- <div class="center-box bg-black absolute left-[47%] top-[52%] md:top-[55%]   aspect-video w-[1vw] md:w-[1vw]"></div> -->
                     <p class="text-center hidden text-sm w-3/4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex consequuntur laudantium obcaecati minima qui earum officia consequatur, laboriosam libero sequi. Cum dolore earum, dolorem voluptatem hic totam sapiente non iste, architecto, alias aspernatur quasi assumenda.</p>
                 </div>
+                <div id="introContent" class="w-full h-screen absolute z-[99] md:px-[10px] flex justify-center items-center top-0 left-0 bg-white">
+                    <p class="font-[handjet] text-[10vw] text-center leading-none ">Your Virtual Dressing Room, Anytime Anywhere</p>
+                    
+                    <div id="glitchImgs" class="absolute w-full h-full justify-center items-center flex z-[-1] top-0 left-1/2 -translate-x-1/2">
+                        <img id="img4" class="absolute g-img opacity-0  h-full object-top" src="./assets/images/model1_swim-removebg-preview.png" alt="">
+                        <img id="img3" class="absolute g-img opacity-0  h-full object-top" src="./assets/images/model1_brown_jac-removebg-preview.png" alt="">
+                        <img id="img2" class="absolute g-img opacity-0  h-full object-top" src="./assets/images/model1.png" alt="">
+                        <img id="img1" class="absolute g-img opacity-0  h-full object-top" src="./assets/images/model1_brown_fur-removebg-preview.png" alt="">
+                    </div>
+                </div>
+
             </div>
         </div>
-        <div class="h-screen  relative w-full">
+        <div class="h-screen hidden relative w-full">
             <div id="glitchImgs" class="absolute w-full h-full justify-center items-center flex z-[8] top-0 left-1/2 -translate-x-1/2">
                 <img id="img4" class="absolute g-img opacity-0  h-full object-top" src="./assets/images/model1_swim-removebg-preview.png" alt="">
                 <img id="img3" class="absolute g-img opacity-0  h-full object-top" src="./assets/images/model1_brown_jac-removebg-preview.png" alt="">
                 <img id="img2" class="absolute g-img opacity-0  h-full object-top" src="./assets/images/model1.png" alt="">
                 <img id="img1" class="absolute g-img opacity-0  h-full object-top" src="./assets/images/model1_brown_fur-removebg-preview.png" alt="">
+            </div>
+        </div>
+        <div class="minimap-wrapper h-[300vh] relative w-full ">
+            <div class="minimap sticky top-0 overflow-hidden h-screen flex w-full p-5 gap-5  md:px-32 md:py-20 md:gap-20">
+                <div class="virtual-photu top-0 left-0 absolute h-screen z-[9] bg-white w-full p-10 flex items-center">
+                    <h1 class="font-[anton]  text-[20vw] md:text-[10vw] md:leading-[22vh] leading-[11vh]">Your <span class="font-medium tracking-tight"> Virtual <br> </span>Dressing  Room, <br> Anytime <br> Anywhere</h1>
+                </div>
+                <div class="details absolute md:w-[20vw] bottom-10 font-[anton] right-10 text-right">
+                    <h1 class="text-4xl mb-5">Virtual Try-on <br> in the Wild</h1>
+                    <h1 class="text-sm">Virtual try-on uses internet images and customizes TryonNet for high-quality,
+                        consistent results in diverse scenarios.</h1>
+                </div>
+                <div class="images md:block hidden relative space-y-5">
+                    <div class="selectBox absolute  top-[41.5%] -left-2 border-4 w-32 h-40"></div>
+                    <div class="img-box w-28 h-36 overflow-hidden bg-red-500 rounded-lg">
+                        <img class="h-full w-full object-cover" src="./assets/images/Screenshot 2024-09-04 183205.png"
+                            alt="Image 1">
+                    </div>
+                    <div class="img-box w-28 h-36 overflow-hidden bg-red-500 rounded-lg">
+                        <img class="h-full w-full object-cover" src="./assets/images/Screenshot 2024-09-04 183923.png"
+                            alt="Image 1">
+                    </div>
+                    <div class="img-box w-28 h-36 overflow-hidden bg-red-500 rounded-lg">
+                        <img class="h-full w-full object-cover" src="./assets/images/Screenshot 2024-09-04 184218.png"
+                            alt="Image 1">
+                    </div>
+
+
+                </div>
+                <div class="showimage w-full h-full  relative flex justify-center">
+                    <div class="imgParent absolute h-full w-full flex flex-col gap-5 ">
+                        <div class="imgBox overflow-hidden shrink-0 rounded-lg w-full h-[60%]   md:h-full">
+                            <img src="./assets/images/Screenshot 2024-09-04 183205.png"
+                                class="h-full md:ml-52 object-cover" alt="">
+                        </div>
+                        <div class="imgBox overflow-hidden shrink-0 rounded-lg w-full h-[60%]   md:h-full">
+                            <img src="./assets/images/Screenshot 2024-09-04 183923.png"
+                                class="h-full md:ml-52 object-cover" alt="">
+                        </div>
+                        <div class="imgBox overflow-hidden shrink-0 rounded-lg w-full  h-[60%]   md:h-full">
+                            <img src="./assets/images/Screenshot 2024-09-04 184218.png"
+                                class="h-full md:ml-52 object-cover" alt="">
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
