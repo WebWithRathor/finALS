@@ -60,3 +60,6 @@ html, body{
 }
 
   
+.introParent{
+    perspective: 1000px;
+}

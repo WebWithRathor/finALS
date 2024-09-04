@@ -259,7 +259,7 @@ skewEffect();
 
 
 function circleAnime(){
-    
+
     function circlePageAnime(){
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -380,3 +380,32 @@ function circleAnime(){
 }
 
 circleAnime();
+
+
+
+
+function introAnime(){
+
+    const loading = document.querySelector('.loading')
+    var x = Number(loading.innerText.split('%')[0])
+
+    const loadingInterval = setInterval(() => {
+        x += Math.floor(Math.random()*10)
+        loading.innerText = x + '%';
+        if(x >=100){
+            loading.innerText = '100%';
+            gsap.to('.intro',{
+                transform:'rotateX(-70deg)',
+                duration:.8,
+                top:'60%',
+            })
+            clearInterval(loadingInterval)
+        }
+    }, 100);
+
+
+
+}
+
+introAnime();
+
