@@ -87,6 +87,17 @@ function footerAnimation() {
         stagger: 0.05,
         duration: 2,
     })
+    gsap.to('.ending-page .overlay', {
+        y : -2,
+        duration: 1,
+        scrollTrigger: {
+            trigger: '.ending-page',
+            start: 'top 20%',
+            end: '100% top',
+            scrub: true,
+            markers :true,
+        }
+    })
     gsap.to('.top-section, .middle-text', {
         transform: 'translateY(0)',
         duration: 1,
