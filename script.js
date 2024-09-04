@@ -93,9 +93,9 @@ function footerAnimation() {
         scrollTrigger: {
             trigger: '.ending-page',
             start: 'top 20%',
-            end: '10% top',
+            end: '100% top',
             scrub: true,
-            // markers :true,
+            markers :true,
         }
     })
     gsap.to('.top-section, .middle-text', {
