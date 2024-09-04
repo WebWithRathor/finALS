@@ -70,22 +70,35 @@ function footerAnimation() {
     const letters = large_text.textContent.split('')
     let clutter = "";
     letters.forEach(e => {
-        clutter += `<span class="text-transparent bgImg">${e}</span>`;
+        clutter += `<span class="">${e}</span>`;
     })
     large_text.innerHTML = clutter;
     gsap.set('#idm-vton span', { display: 'inline-block' })
-    gsap.from('#idm-vton span', {
-        transform: 'translateY(100%)',
-        stagger: 0.05,
-        duration: 1,
+    const tl = gsap.timeline({
         scrollTrigger: {
             trigger: 'footer',
             start: 'top 20%',
-            end: '10% top',
+            end: '10% 10%',
             scrub: 2,
-            // markers: true,.
+            markers: true,
         }
     })
+    tl.from('#idm-vton span', {
+        transform: 'translateY(100%)',
+        stagger: 0.05,
+        duration: 2,
+    })
+    gsap.to('.top-section, .middle-text', {
+        transform: 'translateY(0)',
+        duration : 1,
+        scrollTrigger:{
+            trigger : 'footer',
+            start : 'top 20%',
+            end : '10% top',
+            scrub : true,
+            // markers : true,
+        }
+    }, 'b')
 }
 footerAnimation()
 
