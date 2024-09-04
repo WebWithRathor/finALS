@@ -27,7 +27,7 @@
 
 
         <div class="fixed w-full py-[2vw] px-[4vw] z-[20] justify-between flex items-center">
-            <h1 class="font-[handjet] font-black text-xl">IDM-VTON</h1>
+            <h1 class="font-[handjet] font-black text-xl mix-blend-difference -z-10">IDM-VTON</h1>
             <div class="flex gap-10 text-xl font-medium uppercase">
                 <h2 class="text-hover">Home</h2>
                 <h2 class="text-hover">Docs</h2>
@@ -80,11 +80,9 @@
                     <div id="glitchImgs"
                         class="absolute w-full h-full justify-center items-center flex z-[-1] top-0 left-[60%] -translate-x-1/2">
 
-                        <img id="img3" class="absolute g-img opacity-0  h-full object-top"
-                            src="./assets/images/model1_brown_jac-removebg-preview.png" alt="">
-                        <img id="img2" class="absolute g-img opacity-0  h-full object-top"
+                        <img id="img1" class="absolute g-img opacity-1  h-full object-contain object-bottom"
                             src="./assets/images/model1.png" alt="">
-                        <img id="img1" class="absolute g-img opacity-0  h-full object-top"
+                        <img id="img2" class="absolute g-img opacity-0  h-full object-contain object-bottom"
                             src="./assets/images/model1_brown_fur-removebg-preview.png" alt="">
                     </div>
 
@@ -144,14 +142,13 @@
             </div>
         </div>
         <div class="minimap-wrapper h-[300vh] relative w-full ">
-            <div
-                class="minimap sticky top-0 overflow-hidden h-screen flex w-full p-5 gap-5  md:px-32 md:py-20 md:gap-20">
+            <div class="minimap sticky top-0 overflow-x-hidden h-screen flex w-full p-5 gap-5  md:px-32 md:py-20 md:gap-20">
                 <div class="virtual-photu top-0 left-0 absolute h-screen z-[9]  w-full p-10 flex items-center">
                     <h1 class="font-[anton]  text-[20vw] md:text-[10vw] md:leading-[22vh] leading-[11vh]">Explore The
                         <br> Try-On Gallery
                     </h1>
                 </div>
-                <div class="details absolute md:w-[20vw] bottom-10 font-[anton] right-10 text-right">
+                <div class="details absolute md:w-[20vw] -bottom-[25%] md:bottom-10 font-[anton] right-10 text-right">
                     <h1 class="text-4xl mb-5">Virtual Try-on <br> in the Wild</h1>
                     <h1 class="text-sm">Virtual try-on uses internet images and customizes TryonNet for high-quality,
                         consistent results in diverse scenarios.</h1>

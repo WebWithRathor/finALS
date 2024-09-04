@@ -95,7 +95,7 @@ function footerAnimation() {
             start: 'top 20%',
             end: '100% top',
             scrub: true,
-            markers :true,
+            // markers :true,
         }
     })
     gsap.to('.top-section, .middle-text', {
@@ -123,35 +123,14 @@ function imgGlitchEffect() {
 
     tl
         .to('#img1', {
-            opacity: 1,
-            duration: 1,
-        })
-        .to('#img1', {
             opacity: 0,
-            // duration: 1,
-        }, "i0")
-
+            duration: 1,
+        },'i0')
         .to('#img2', {
             opacity: 1,
             duration: 1,
         }, "i0")
-        .to('#img2', {
-            opacity: 0,
-            // duration: 1,
-        }, "i1")
-
-        .to('#img3', {
-            opacity: 1,
-            duration: 1,
-        }, "i1")
-        .to('#img3', {
-            opacity: 0,
-            // duration: 1,
-        })
-
-
-
-
+        
 }
 imgGlitchEffect()
 
