@@ -63,5 +63,13 @@ html, body{
     transition: all .2s;
     cursor: pointer;
 }
-
+#btn-svg rect {
+    stroke-width: 10px;
+    stroke-dasharray: 1000; /* Adjust based on rect size */
+    stroke-dashoffset: 1000;
+    transition: stroke-dashoffset 0.6s ease;
+  }
   
+  #btn-wrap:hover #btn-svg rect {
+    stroke-dashoffset:0;
+}

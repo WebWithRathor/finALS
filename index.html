@@ -11,15 +11,41 @@
 
 <body>
     <div class="main bg-black text-[#AAA9AC]">
-        <div class="fixed w-full py-[2vw] px-[4vw] z-[20] justify-between flex items-center">
-            <h1 class="font-[handjet] font-black text-xl">IDM-VTON</h1>
-            <div class="flex gap-10 text-xl font-medium uppercase">
-                <h2 class="text-hover">Home</h2>
-                <h2 class="text-hover">Docs</h2>
-                <h2 class="text-hover">Features</h2>
-                <h2 class="text-hover">Team</h2>
-            </div>
+
+
+        <div id="menu-cont"
+      class="menu-page fixed top-[100%] z-[99] overflow-hidden w-full md:w-1/2 right-0 h-screen bg-black justify-center flex flex-col  items-center gap-4 md:gap-4">
+      <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Teams</h1>
+      <hr class="h-1 w-[80%] opacity-30">
+      <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Docs</h1>
+      <hr class="h-1 w-[80%] opacity-30">
+      <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Docs</h1>
+      <hr class="h-1 w-[80%] opacity-30">
+      <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Contact</h1>
+      <hr class="h-1 w-[80%] opacity-30">
+      <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Repo</h1>
+      <hr class="h-1 w-[80%] opacity-30">
+      <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Working</h1>
+      <hr class="h-1 w-[80%] opacity-30">
+      
+      
+    </div>
+
+    <nav class="fixed w-full  md:py-[2vw] py-4 px-[4vw] z-[100] justify-between flex items-center">
+        <h1 class="font-[handjet] font-black text-xl">IDM-VTON</h1>
+        <div id="btn-wrap" class="w-40 md:block hidden relative backdrop-blur-lg">
+            <button class="absolute w-full text-white h-full md:px-6 md:py-2 uppercase">Try Demo</button>
+            <svg id="btn-svg" class="w-40" viewBox="0 0 607 193" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" class="w-full h-48" stroke="#aaa9ac"  />
+            </svg>
+          </div>
+
+        <div id="menu-icon" class="flex items-center relative flex-col md:gap-1 gap-1 cursor-pointer  p-1 w-[30px] group">
+            <div class="w-[16px] md:h-[3px] h-[2px] shrink-0 bg-white group-hover:w-[28px] duration-200 rounded-full"></div>
+            <div class="w-[22px] md:h-[3px] h-[2px] shrink-0 bg-white group-hover:w-[22px] duration-200 rounded-full"></div>
+            <div class="w-[28px] md:h-[3px] h-[2px] shrink-0 bg-white group-hover:w-[16px] duration-200 rounded-full"></div>
         </div>
+    </nav>
 
         <div class="h-screen w-full overflow-hidden">
             <spline-viewer url="https://prod.spline.design/ueHV1l1cTbnxRS2X/scene.splinecode"></spline-viewer>
