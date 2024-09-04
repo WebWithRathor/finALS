@@ -5,43 +5,52 @@ function minmap() {
             scroller: 'body',
             trigger: '.minimap-wrapper',
             start: 'top 0',
-            end:'top -200%',
+            end: 'top -200%',
             scrub: 1,
-            snap: [0, 0.20, 0.40, 0.60, 0.80, 1.0]
+            snap: [0.00, 0.17, 0.33, 0.50, 0.67, 0.83, 1.00]
         }
     })
 
     gsap.set('.minimap .images .img-box', {
-        y: '200%'
+        y: '160%'
     })
 
     tl
+        .to('.virtual-photu', {
+            scale: 0.8,
+            x: '-50%',
+            opacity: 0
+        }, 'START')
+        .from('.minimap .images , .minimap .showimage , .minimap .details', {
+            x: '100vw',
+        }, 'START')
+
         .to('.minimap  .imgBox', {
             y: '-=105%'
         }, 'a')
         .to('.minimap .images .img-box', {
-            y: '-=118%'
+            y: '-=115%'
         }, 'a')
         .to('.minimap .images .img-box', {
-            y: '-=118%'
+            y: '-=115%'
         }, 'b')
         .to('.minimap  .imgBox', {
             y: '-=105%'
         }, 'b')
         .to('.minimap .images .img-box', {
-            y: '-=118%'
+            y: '-=115%'
         }, 'c')
         .to('.minimap  .imgBox', {
             y: '-=105%'
         }, 'c')
         .to('.minimap .images .img-box', {
-            y: '-=118%'
+            y: '-=115%'
         }, 'd')
         .to('.minimap  .imgBox', {
             y: '-=105%'
         }, 'd')
         .to('.minimap .images .img-box', {
-            y: '-=118%'
+            y: '-=115%'
         }, 'e')
         .to('.minimap  .imgBox', {
             y: '-=95%'
