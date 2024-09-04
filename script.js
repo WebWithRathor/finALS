@@ -7,7 +7,7 @@ function minmap() {
             start: 'top 0',
             end: 'top -200%',
             scrub: 1,
-            snap: [0.00, 0.17, 0.33, 0.50, 0.67, 0.83, 1.00]
+            snap: [0.00, 0.33, 0.67, 1.00]
         }
     })
 
@@ -37,24 +37,7 @@ function minmap() {
         .to('.minimap  .imgBox', {
             y: '-=105%'
         }, 'b')
-        .to('.minimap .images .img-box', {
-            y: '-=115%'
-        }, 'c')
-        .to('.minimap  .imgBox', {
-            y: '-=105%'
-        }, 'c')
-        .to('.minimap .images .img-box', {
-            y: '-=115%'
-        }, 'd')
-        .to('.minimap  .imgBox', {
-            y: '-=105%'
-        }, 'd')
-        .to('.minimap .images .img-box', {
-            y: '-=115%'
-        }, 'e')
-        .to('.minimap  .imgBox', {
-            y: '-=95%'
-        }, 'e')
+
 }
 
 minmap();
