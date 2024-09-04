@@ -26,20 +26,20 @@ function landingPageAnimation() {
             fontSize: '2rem',
         }, 'a')
         .to('#transition-circle', {
-            scaleY:28,
+            scaleY: 28,
             scale: 1,
             duration: .5
         }, '.2+a')
-        .to('#transition-circle',{
-            opacity:0,
-            duration:.1
-        },"qum")
+        .to('#transition-circle', {
+            opacity: 0,
+            duration: .1
+        }, "qum")
         .to("#introContent", {
             clipPath: "polygon(0% 0%,100% 0%, 100% 100%, 0% 100% )"
-        },"qum")
-        // .from("#glitchImgs", {
-        //     y:200,
-        // },"qum")
+        }, "qum")
+    // .from("#glitchImgs", {
+    //     y:200,
+    // },"qum")
 
 
 
@@ -81,18 +81,31 @@ function footerAnimation() {
     })
     large_text.innerHTML = clutter;
     gsap.set('#idm-vton span', { display: 'inline-block' })
-    gsap.from('#idm-vton span', {
-        transform: 'translateY(100%)',
-        stagger: 0.05,
-        duration: 1,
+    const tl = gsap.timeline({
         scrollTrigger: {
             trigger: 'footer',
             start: 'top 20%',
-            end: '10% top',
+            end: '10% 10%',
             scrub: 2,
-            // markers: true,.
+            markers: true,
         }
     })
+    tl.from('#idm-vton span', {
+        transform: 'translateY(100%)',
+        stagger: 0.05,
+        duration: 2,
+    })
+    gsap.to('.top-section, .middle-text', {
+        transform: 'translateY(0)',
+        duration : 1,
+        scrollTrigger:{
+            trigger : 'footer',
+            start : 'top 20%',
+            end : '10% top',
+            scrub : true,
+            // markers : true,
+        }
+    }, 'b')
 }
 footerAnimation()
 
