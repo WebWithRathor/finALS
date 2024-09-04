@@ -80,7 +80,6 @@ function footerAnimation() {
             start: 'top 20%',
             end: '10% 10%',
             scrub: 2,
-            markers: true,
         }
     })
     tl.from('#idm-vton span', {
@@ -96,7 +95,6 @@ function footerAnimation() {
             start : 'top 20%',
             end : '10% top',
             scrub : true,
-            // markers : true,
         }
     }, 'b')
 }
@@ -280,7 +278,6 @@ function circleAnime(){
                 trigger: '.circlePage',
                 start: 'top -1%',
                 end: 'top -150%',
-                markers: true,  // Corrected 'marksers' to 'markers'
                 scrub:1,
             }
         });
@@ -329,7 +326,6 @@ function circleAnime(){
                 trigger: '.circlePage',
                 start: 'top -1%',
                 end: 'top -150%',
-                markers: true,  // Corrected 'marksers' to 'markers'
                 scrub:1,
             }
         });
