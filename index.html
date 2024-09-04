@@ -13,13 +13,18 @@
         <div class="landingPage relative h-[200vh] bg-black">
             <div class="sticky top-0 h-screen bg-transparent overflow-hidden">
                 <div class="frontPage overflow-hidden relative h-screen w-full flex flex-col px-5 lg:px-10 items-center justify-center gap-5">
+
+                    <div class="brain h-screen w-full absolute">
+                        <div class="logoHidder"></div>
+                        <spline-viewer url="https://prod.spline.design/Gdg6ZlEvzMfChQK6/scene.splinecode"></spline-viewer>
+                    </div>
                     
-                    <h1 class="main-text z-[5] px-5 md:px-10 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-[handjet] leading-none text-[26vw] w-full flex items-center justify-center">
+                    <h1 class="main-text pointer-events-none z-[5] px-5 md:px-10 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-[handjet] leading-none text-[26vw] w-full flex items-center justify-center">
                         <span class="font-[handjet] font-black tracking-wider invert">IDM</span>
                         <span class="font-[handjet] font-black tracking-wider invert">-</span>
                         <span class="font-[handjet] font-black tracking-wider invert">VTON</span>
                     </h1>
-                    <div id="transition-circle" class="absolute top-1/2 left-1/2 -translate-x-1/2  origin-center  bg-white w-[2vw] aspect-square z-[99]"></div>
+                    <div id="transition-circle" class="absolute pointer-events-none top-1/2 left-1/2 -translate-x-1/2  origin-center  bg-white w-[2vw] aspect-square z-[99]"></div>
                     <!-- <div class="center-box bg-black absolute left-[47%] top-[52%] md:top-[55%]   aspect-video w-[1vw] md:w-[1vw]"></div> -->
                     <p class="text-center hidden text-sm w-3/4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex consequuntur laudantium obcaecati minima qui earum officia consequatur, laboriosam libero sequi. Cum dolore earum, dolorem voluptatem hic totam sapiente non iste, architecto, alias aspernatur quasi assumenda.</p>
                 </div>
@@ -98,6 +103,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
         integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.23/build/spline-viewer.js"></script>
     <script src="script.js"></script>
 </body>
 
