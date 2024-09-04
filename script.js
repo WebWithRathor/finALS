@@ -241,7 +241,7 @@ function circlePageAnime(){
             trigger: '.circlePage',
             start: 'top -1%',
             end: 'top -150%',
-            markers: true,  // Corrected 'marksers' to 'markers'
+            // markers: true,  // Corrected 'marksers' to 'markers'
             scrub:1,
         }
     });
@@ -290,7 +290,7 @@ function circlePageAnimeResponsive(){
             trigger: '.circlePage',
             start: 'top -1%',
             end: 'top -150%',
-            markers: true,  // Corrected 'marksers' to 'markers'
+            // markers: true,  // Corrected 'marksers' to 'markers'
             scrub:1,
         }
     });
