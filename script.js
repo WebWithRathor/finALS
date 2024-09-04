@@ -390,7 +390,7 @@ function introAnime(){
     var x = Number(loading.innerText.split('%')[0])
 
     const loadingInterval = setInterval(() => {
-        x += Math.floor(Math.random()*10)
+        x += Math.floor(Math.random()*20)
         loading.innerText = x + '%';
         if(x >=100){
             loading.innerText = '100%';

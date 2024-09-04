@@ -59,9 +59,15 @@ html, body{
     position: relative;
 }
 
-  
+
 .introParent{
     perspective: 1000px;
+}
+.intro{
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(0.5);
+    backdrop-filter: blur(30px);
 }
 
 canvas{
