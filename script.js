@@ -39,4 +39,8 @@ tl.to('.circleDiv img', {
 .to('.circleDiv img', {
     scale:3.5
 },'b')
+.from('.ourMission', {
+    opacity:0,
+    right:'10%'
+},'b')
 
