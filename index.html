@@ -11,7 +11,7 @@
 
 <body>
     <div class="main bg-black text-white">
-        <div class="fixed w-full py-[2vw] px-[4vw] justify-between flex items-center">
+        <div class="fixed w-full py-[2vw] px-[4vw] z-[20] justify-between flex items-center">
             <h1 class="font-[handjet] font-black text-xl">IDM-VTON</h1>
             <div class="flex gap-10 uppercase">
                 <h2 class="text-hover">Home</h2>
@@ -20,6 +20,12 @@
                 <h2 class="text-hover">Team</h2>
             </div>
         </div>
+
+        <div class="h-screen w-full overflow-hidden">
+            <spline-viewer url="https://prod.spline.design/ueHV1l1cTbnxRS2X/scene.splinecode"></spline-viewer>
+            <div class="logoHidder absolute"></div>
+        </div>
+
         <div id="skew" class=" py-20 w-full overflow-hidden">
             <div
                 class="bar skew-bar text-7xl uppercase flex w-screen justify-center mt-52 overflow-hidden font-serif py-3 ">
@@ -192,8 +198,8 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
-    
-    <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.23/build/spline-viewer.js"></script> -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.23/build/spline-viewer.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.23/build/spline-viewer.js"></script>
     <script src="script.js"></script>
 </body>
 
