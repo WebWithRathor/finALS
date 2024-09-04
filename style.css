@@ -14,3 +14,7 @@ html, body{
     src: url('./assets/fonts/Anton-Regular.ttf');
 }
 
+.magnet-hover{
+    cursor: pointer;
+    transition: all .25s;
+}
