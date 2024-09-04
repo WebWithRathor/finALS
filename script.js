@@ -4,7 +4,7 @@ let arr = [
         "https://m.media-amazon.com/images/I/61xC6xsb7cL._SX679_.jpg"
     )
 ]
-function introAnimation(){
+function introAnimation() {
     const totalPercentage = 100;
     let currentPercentage = 0;
 
@@ -25,10 +25,20 @@ function introAnimation(){
                 delay: 1.2,
                 color: 'black',
                 backgroundColor: 'white',
-            })
+            }, "a")
+            gsap.to('svg #text text ', {
+                delay: 1.2,
+                stroke: "white"
+            }, "a")
+            gsap.to('svg #text text ', {
+                delay: 1.2,
+                stroke: "white",
+                strokeDashoffset: 300,
+                duration: 2
+            }, "a")
             gsap.to('.center-text', {
                 delay: 1.2,
-                fontSize: "10vw",
+                fontSize: "26vw",
                 ease: "bounce.out",
             })
         }

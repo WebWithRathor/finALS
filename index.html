@@ -11,19 +11,20 @@
 <body>
     <div class="main h-screen w-full flex items-center justify-center relative">
         <div class="intro-page absolute top-0 h-screen bg-black w-full text-white items-center justify-center">
-            <h1 class="center-text text-3xl md:text-5xl lg:text-7xl font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center uppercase whitespace-nowrap">idm-vton</h1>
+            <svg class="w-[100vw] z-[99] h-[28vw] flex items-center bg-red-500/[0] absolute top-1/2 -translate-y-1/2 -translate-x-1/2 left-1/2">
+                <symbol id="text">
+                    <text class="text-[26vw] leading-none  uppercase " text-anchor="middle" x="50%" y="90%">idm-vton</text>
+                </symbol>
+                <use xlink:href="#text"></use>
+            </svg>
+            <h1 class="center-text text-[26vw] font-[anton] font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center uppercase whitespace-nowrap">idm-vton</h1>
+
             <div class="loading-text absolute bottom-20 left-1/2 -translate-x-1/2 text-center text-lg">
                 <h1 id="digits" class="font-semibold">0%</h1>
                 <h2 class="whitespace-nowrap text-base">Loading your experience</h2>
             </div>
         </div>
-        <a class="hidden" href=""><span>button</span></a>
-        <button
-            class="hidden bg-orange-950 text-red-500 border border-red-500 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
-            <span
-                class="bg-red-500 shadow-red-500 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
-            Hover Me
-        </button>
+
     </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
