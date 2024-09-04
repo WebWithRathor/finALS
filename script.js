@@ -95,7 +95,7 @@ function footerAnimation() {
             start: 'top 20%',
             end: '100% top',
             scrub: true,
-            markers :true,
+            // markers :true,
         }
     })
     gsap.to('.top-section, .middle-text', {
