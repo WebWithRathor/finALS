@@ -1,5 +1,4 @@
 
-
 function landingPageAnimation() {
 
     const tl = gsap.timeline({
@@ -40,7 +39,7 @@ function landingPageAnimation() {
 
 
 }
-landingPageAnimation()
+// landingPageAnimation()
 
 function jumpSmooth() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -231,3 +230,40 @@ texts.forEach(e => {
 }
 
 textHover();
+
+function skewEffect(){
+    let skewTime;
+
+    gsap.to('.skew-bar h1',{
+        translateX : '-100%',
+        repeat:-1,
+        ease:'linear',
+        duration:5,
+    })
+
+    window.addEventListener('mousemove',(e)=>{
+        clearTimeout(skewTime)
+        if(e.movementX > 0){
+            gsap.to('.skew-bar h1',{
+                skewX : '-5deg'
+            })
+           
+        }
+        else{
+            gsap.to('.skew-bar h1',{
+                skewX : '5deg'
+            })
+        }
+        skewTime = setTimeout(()=>{
+            gsap.to('.skew-bar h1',{
+                skewX : '0deg'
+            })
+        },100)
+    })
+}
+
+skewEffect();
+
+
+
+
