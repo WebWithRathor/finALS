@@ -6,27 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
 <body>
     <div class="main">
-        <div class="landingPage relative h-[300vh] bg-gray-400">
-            <div class="sticky top-0 h-[100vh] bg-transparent">
-                <div class="frontPage overflow-hidden relative h-screen w-full flex flex-col px-5 lg:px-10 items-center justify-center gap-5">
-                    <img class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full object-cover object-top" src="./assets/images/model1.png" alt="">
-                    <div class="main-text z-[5] px-5 md:px-10 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-[anton] leading-none text-[26vw] w-full flex items-center justify-center">
-                        <h1 class="">IDM</h1>
-                        <h1 class="">-</h1>
-                        <h1 class="">VTON</h1>
-                    </div>
-                    <div class="center-box bg-black absolute left-[47%] top-[52%] md:top-[55%]  -translate-x-1/2 -translate-y-1/2 aspect-video w-[1vw] md:w-[1vw]"></div>
-                    <p class="text-center hidden text-sm w-3/4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex consequuntur laudantium obcaecati minima qui earum officia consequatur, laboriosam libero sequi. Cum dolore earum, dolorem voluptatem hic totam sapiente non iste, architecto, alias aspernatur quasi assumenda.</p>
+        <div id="landing-page" class="h-screen bg-white"></div>
+        <footer class="footer relative h-screen px-5 lg:px-10 flex flex-col-reverse md:flex-col items-center justify-end gap-5">
+            <div class="top-section font-[hepta-reg] w-full flex flex-col justify-center sm:flex-row sm:justify-between sm:items-start sm:gap-10 gap-5">
+                <li id="li-1" class="w-fit relative hidden sm:flex flex-col justify-center gap-1">
+                    <h1 class="li-1 text-2xl font-semibold capitalize font-[anton]">social handles</h1>
+                    <a class="li-1 text-lg capitalize font-light" href=""><i class="ri-twitter-x-line"></i></a>
+                    <a class="li-1 text-lg capitalize font-light" href=""><i class="ri-youtube-fill"></i></a>
+                    <a class="li-1 text-lg capitalize font-light" href=""><i class="ri-instagram-line"></i></a>
+                </li>
+                <li id="li-2" class="w-fit relative flex flex-col justify-center gap-1">
+                    <h1 class="li-2 text-2xl font-semibold capitalize font-[anton]">friends</h1>
+                    <a class="li-2 text-lg capitalize font-light" href="">PS2 filter AI</a>
+                    <a class="li-2 text-lg capitalize font-light" href="">fooocus</a>
+                    <a class="li-2 text-lg capitalize font-light" href="">story diffusion</a>
+                </li>
+                <li id="li-3" class="w-fit relative flex flex-col justify-center gap-1">
+                    <h1 class="li-3 text-2xl font-semibold capitalize font-[anton] whitespace-nowrap">legal
+                    </h1>
+                    <a class="li-3 text-lg capitalize font-light" href="">privacy</a>
+                    <a class="li-3 text-lg capitalize font-light" href="">terms</a>
+                </li>
+            </div>
+            <div class="middle-part w-full z-[5] h-[30vh] md:h-[40vh] overflow-hidden border-b-2 border-b-neutral-600 px-5 md:px-10 font-[anton] leading-none text-[26vw] flex items-center justify-center">
+                <h1 id="idm-vton"
+                    class="text-[26vw] translate-y-[15%] uppercase whitespace-nowrap">
+                    idm-vton
+                </h1>
+            </div>
+            <div class="bottom-links w-full pb-5 flex flex-col gap-3 md:gap-0 md:flex-row items-start justify-between md:items-center">
+                <div class="">
+                    <h1 class="head font-bold text-gray-600 capitalize">copyright:</h1>
+                    <h1 class="body font-bold text-black capitalize">© IDM VTON, Inc. All rights reserved.</h1>
+                </div>
+                <div class="">
+                    <h1 class="head font-bold text-gray-600 capitalize">fast travel:</h1>
+                    <a href="#landing-page" class="body font-bold text-black capitalize">go back to top</a>
+                </div>
+                <div class="">
+                    <h1 class="head font-bold text-gray-600 capitalize">learn:</h1>
+                    <a href="#" class="body font-bold text-black capitalize">how to use ?</a href="#">
+                </div>
+                <div class="">
+                    <h1 class="head font-bold text-gray-600 capitalize">design by:</h1>
+                    <h1 class="body font-bold text-black capitalize">the golus</h1>
                 </div>
             </div>
-        </div>
-        <div class="h-screen bg-white"></div>
+        </footer>
     </div>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
