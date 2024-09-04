@@ -11,13 +11,13 @@
 
 <body>
     <div class="main">
-        <div class="fixed w-full py-[2vw] px-[4vw] justify-between flex items-center">
+        <div class="fixed w-full py-[2vw] px-[4vw] justify-between flex items-center z-[10]">
             <h1 class="font-[handjet] font-black text-xl">IDM-VTON</h1>
             <div class="flex gap-10 uppercase">
-                <h2>Home</h2>
-                <h2>Docs</h2>
-                <h2>Features</h2>
-                <h2>Team</h2>
+                <h2 class="text-hover">Home</h2>
+                <h2 class="text-hover">Docs</h2>
+                <h2 class="text-hover">Features</h2>
+                <h2 class="text-hover">Team</h2>
             </div>
         </div>
         <div class="landingPage relative h-[200vh] ">
@@ -26,7 +26,7 @@
 
                     <p class=" text-[5vw] w-[50%] leading-none mt-10">Your Virtual Dressing Room, Anytime Anywhere</p>
                     <div class="self-end flex flex-col">
-                        <button class="border-2 md:px-10 rounded-sm md:py-2 border-black/[.8] text-3xl ml-auto self-end font-[handjet]"> Start Demo</button>
+                        <button class="open text-hover border-2 md:px-10 rounded-sm md:py-2 border-black/[.8] text-3xl ml-auto self-end font-[handjet]"> Start Demo</button>
                         <p class=" text-[5vw]  leading-none self-end text-right">Try It Before You Buy It</p>
                     </div>
                     
@@ -107,27 +107,82 @@
                 </div>
             </div>
         </div>
+
+        <div class="h-[250vh] w-full">
+            <div class="h-screen w-full sticky top-0 overflow-hidden">
+                <div class="circlePage h-screen w-full sticky top-0 overflow-hidden">
+                    <div class="circleDiv  md:h-[10vw] md:w-[10vw] h-[12vh] w-[12vh] overflow-hidden bg-black text-white rounded-full absolute top-1/2 right-[15vw] translate-x-[50%] translate-y-[-50%]">
+                        <div class="leftText text-nowrap absolute top-1/2 left-[34%] translate-x-[-50%] translate-y-[-50%] w-[46vw] h-auto overflow-hidden">
+                            <h1 class="font-['anton'] md:text-9xl text-4xl relative">Our Journey</h1>
+                        </div>
+                        <img class="absolute top-1/2 z-[1] left-1/2 translate-x-[-50%] text-right translate-y-[-50%] md:h-[10vw] md:w-[10vw] h-[12vh] w-[12vh] rounded-full object-cover" src="./assets/images/3d-rendering-arrow-hitting-target_23-2151266523.avif" alt="">
+                        <div class="rightText text-nowrap absolute top-1/2 right-[34%] text-right translate-x-[50%] translate-y-[-50%] w-[46vw] h-auto overflow-hidden">
+                            <h1 class="font-['anton'] md:text-9xl text-4xl relative">Our Mission</h1>
+                        </div>
+                        <p class="ourMission absolute md:bottom-[42%] md:w-[40vw] md:right-[20%] bottom-[32%] right-[35%] w-[80vw] text-lg leading-6">
+                            At IDM VTON, our mission is to empower businesses with cutting-edge technology solutions that drive growth and success. We strive to stay ahead of the curve by constantly evolving and adapting to the latest industry trends. Our team is dedicated to providing personalized services that meet the unique needs of each client, ensuring that they achieve their goals and objectives. With a focus on quality, innovation, and customer satisfaction, we aim to be the preferred partner for businesses looking to thrive in the digital age.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tryPage scale-0 fixed top-0 opacity-0  h-screen overflow-hidden overflow-y-auto md:h-screen w-full md:p-16 p-10 gap-4 md:gap-0 bg-black text-zinc-200 flex flex-col md:flex-row justify-between">
+            <div class="close absolute md:top-7 md:right-7 top-2 right-2 cursor-pointer text-white ">
+                <i class="ri-close-large-line text-2xl"></i>
+            </div>
+                <div class="md:w-[48%] md:h-full h-[100vh] flex flex-col items-center justify-between">
+                    <div class="w-full h-[45vh] bg-zinc-600/[.4] rounded-xl flex justify-center items-center text-2xl font-medium">
+                        <h1 class="w-40 text-center opacity-[.4]">Drop image / click to upload</h1>
+                    </div>
+                    <div class="py-4 w-full px-2 flex flex-col md:flex-row gap-2 justify-between items-center">
+                        <button class="py-3 px-6 w-full md:w-fit border-zinc-500 border uppercase font-['anton'] text-xl">
+                            Upload Human
+                        </button>
+                        <h1>use example garments</h1>
+                        <button class="py-3 px-6 w-full md:w-fit border-zinc-500 border uppercase font-['anton'] text-xl">
+                            Upload garments
+                        </button>
+    
+                    </div>
+                    <div class="w-full h-[45vh] bg-zinc-600/[.4] rounded-xl flex justify-center items-center text-2xl font-medium">
+                        <h1 class="w-40 text-center opacity-[.4]">Drop image / click to upload</h1>
+                    </div>
+                </div>
+                <div class="md:w-[48%] md:h-full h-[100vh] flex flex-col items-center justify-between gap-6">
+                    <div class="w-full h-[85%] bg-zinc-600/[.4] rounded-xl flex justify-center items-end text-2xl font-medium">
+                        <img class="opacity-[.5] h-[85%] object-cover" src="./assets/images/boy.png" alt="">
+                    </div>
+                    <button class="py-3 px-6 w-full border-zinc-500 border uppercase font-['anton'] text-xl">
+                        Try on
+                    </button>
+                </div>
+           </div>
+
         <footer
             class="footer relative h-screen px-5 lg:px-10 flex flex-col-reverse md:flex-col items-center justify-end gap-5">
             <div
                 class="top-section translate-y-[200%] font-[hepta-reg] w-full flex flex-col justify-center sm:flex-row sm:justify-between sm:items-start sm:gap-10 gap-5">
                 <li id="li-1" class="w-fit relative hidden sm:flex flex-col justify-center gap-1">
                     <h1 class="li-1 text-2xl font-semibold capitalize font-[anton]">social handles</h1>
-                    <a class="li-1 text-lg capitalize font-light" href=""><i class="ri-twitter-x-line"></i></a>
+                    <div class="flex gap-4">
+                        <a class="li-1 text-lg capitalize font-light" href=""><i class="ri-twitter-x-line"></i></a>
                     <a class="li-1 text-lg capitalize font-light" href=""><i class="ri-youtube-fill"></i></a>
                     <a class="li-1 text-lg capitalize font-light" href=""><i class="ri-instagram-line"></i></a>
+                    </div>
                 </li>
                 <li id="li-2" class="w-fit relative flex flex-col justify-center gap-1">
-                    <h1 class="li-2 text-2xl font-semibold capitalize font-[anton]">friends</h1>
-                    <a class="li-2 text-lg capitalize font-light" href="">PS2 filter AI</a>
-                    <a class="li-2 text-lg capitalize font-light" href="">fooocus</a>
-                    <a class="li-2 text-lg capitalize font-light" href="">story diffusion</a>
+                    <h1 class="li-2 text-hover text-2xl font-semibold capitalize font-[anton]">friends</h1>
+                    <a class="li-2 text-hover text-lg capitalize font-light" href="">PS2 filter AI</a>
+                    <a class="li-2 text-hover text-lg capitalize font-light" href="">fooocus</a>
+                    <a class="li-2 text-hover text-lg capitalize font-light" href="">story diffusion</a>
                 </li>
                 <li id="li-3" class="w-fit relative flex flex-col justify-center gap-1">
                     <h1 class="li-3 text-2xl font-semibold capitalize font-[anton] whitespace-nowrap">legal
                     </h1>
-                    <a class="li-3 text-lg capitalize font-light" href="">privacy</a>
-                    <a class="li-3 text-lg capitalize font-light" href="">terms</a>
+                    <a class="li-3 text-hover text-lg capitalize font-light" href="">privacy</a>
+                    <a class="li-3 text-hover text-lg capitalize font-light" href="">terms</a>
                 </li>
             </div>
             <div
@@ -146,15 +201,15 @@
                 </div>
                 <div class="">
                     <h1 class="head font-bold text-gray-600 capitalize">fast travel:</h1>
-                    <a href="#landing-page" class="body font-bold text-black capitalize">go back to top</a>
+                    <a href="#landing-page" class="body text-hover font-bold text-black capitalize">go back to top</a>
                 </div>
                 <div class="">
                     <h1 class="head font-bold text-gray-600 capitalize">learn:</h1>
-                    <a href="#" class="body font-bold text-black capitalize">how to use ?</a href="#">
+                    <a href="#" class="body text-hover font-bold text-black capitalize">how to use ?</a href="#">
                 </div>
                 <div class="">
                     <h1 class="head font-bold text-gray-600 capitalize">design by:</h1>
-                    <h1 class="body font-bold text-black capitalize">the golus</h1>
+                    <h1 class="body text-hover font-bold text-black capitalize">the golus</h1>
                 </div>
             </div>
         </footer>
