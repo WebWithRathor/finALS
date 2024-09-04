@@ -9,13 +9,7 @@ function landingPageAnimation() {
             scrub: true,
         }
     })
-    tl.to('.frontPage .center-box', {
-        left: '50%',
-        top: '50%',
-        width: '100vw',
-        height: '100vh',
-    }, 'a')
-        .from('#transition-circle', {
+    tl.from('#transition-circle', {
             top: '150%',
             rotate: 4 * 360,
             scale: 0,
@@ -147,8 +141,6 @@ function imgGlitchEffect() {
 }
 imgGlitchEffect()
 
-
-
 function minmap() {
 
     const tl = gsap.timeline({
@@ -192,3 +184,50 @@ function minmap() {
 }
 
 minmap();
+
+function textHover(){
+    const texts = document.querySelectorAll('.text-hover');
+
+texts.forEach(e => {
+    var clutter = '';
+
+    e.textContent.trim().split('').forEach(letter => {
+        if (letter == ' ') {
+            clutter += `<span class='letter font-[900]'>&nbsp;</span>`;
+            return
+        };
+        clutter += `<span class='letter font-[900]'>${letter}</span>`;
+    });
+    e.innerHTML = clutter;
+    // console.log(e);
+
+    let isAnimating = false;
+    e.addEventListener('mouseenter', function () {
+        if (!isAnimating) {
+            isAnimating = true;
+                gsap.to(e.querySelectorAll('span'), {
+                    fontWeight: 100,
+                    transform: 'scale(1, .4)',
+                    stagger: 0.1,
+                    duration:.5,
+                    onStart: () => {
+                        gsap.to(e.querySelectorAll('span'), {
+                            delay:0.6,
+                            stagger: 0.1,
+                            duration:.5,
+                            fontWeight: 900,
+                            transform: 'scale(1, 1)',
+                        });
+                    }
+                });
+
+            setTimeout(() => {
+                isAnimating = false;
+            }, 1000);
+        }
+    });
+});
+
+}
+
+textHover();
