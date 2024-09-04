@@ -365,3 +365,46 @@ function circleAnime() {
 }
 
 circleAnime();
+
+function stepsAnim(){
+    const tl = gsap.timeline({
+        scrollTrigger:{
+            trigger:'.mainstepwrapper',
+            start:'top 0%',
+            end:'-300%',
+            scrub:1
+        }
+    })
+        
+        tl.from('.steps-text:nth-child(1) p',{
+            opacity:0,
+            left:0
+        },`a0`)
+        .from('.steps-text:nth-child(1) h1',{
+            x:250,
+        },`a0`)
+        // .to(`.steps-text:nth-child(2)`,{
+        //     top:"0%"
+        // },`b0`)
+        // .to(`.steps-text:nth-child(1)`,{
+        //     y:"-100%"
+        // },`b0`)
+
+
+        // .from('.steps-text:nth-child(2) p',{
+        //     opacity:0,
+        //     left:0
+        // },`a1`)
+        // .from('.steps-text:nth-child(2) h1',{
+        //     x:250,
+        // },`a1`)
+        // .to(`.steps-text:nth-child(2)`,{
+        //     top:"0%"
+        // },`b1`)
+        // .to(`.steps-text:nth-child(3)`,{
+        //     y:"-100%"
+        // },`b1`)
+
+
+    }
+stepsAnim();
