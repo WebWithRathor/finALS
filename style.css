@@ -13,3 +13,13 @@ html, body{
     font-family: 'anton';
     src: url('./assets/fonts/Anton-Regular.ttf');
 }
+@font-face {
+    font-family: 'handjet';
+    src: url('./assets/fonts/Handjet-VariableFont_ELGR\,ELSH\,wght.ttf');
+}
+
+#introContent{
+    /* clip-path: polygon(50% 0%,50% 0%, 50% 100%, 50% 100% ); */
+    transform-origin: center;
+    clip-path: polygon(50% 0%,50% 0%, 50% 100%, 50% 100% );
+}

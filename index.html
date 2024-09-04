@@ -10,21 +10,30 @@
 
 <body>
     <div class="main">
-        <div class="landingPage relative h-[300vh] bg-gray-400">
-            <div class="sticky top-0 h-[100vh] bg-transparent">
+        <div class="landingPage relative h-[200vh] bg-black">
+            <div class="sticky top-0 h-screen bg-transparent overflow-hidden">
+                <div id="introContent" class="w-full h-screen absolute top-0 left-0 bg-white z-50"></div>
                 <div class="frontPage overflow-hidden relative h-screen w-full flex flex-col px-5 lg:px-10 items-center justify-center gap-5">
-                    <img class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full object-cover object-top" src="./assets/images/model1.png" alt="">
-                    <div class="main-text z-[5] px-5 md:px-10 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-[anton] leading-none text-[26vw] w-full flex items-center justify-center">
-                        <h1 class="">IDM</h1>
-                        <h1 class="">-</h1>
-                        <h1 class="">VTON</h1>
-                    </div>
-                    <div class="center-box bg-black absolute left-[47%] top-[52%] md:top-[55%]  -translate-x-1/2 -translate-y-1/2 aspect-video w-[1vw] md:w-[1vw]"></div>
+                    
+                    <h1 class="main-text z-[5] px-5 md:px-10 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-[handjet] leading-none text-[26vw] w-full flex items-center justify-center">
+                        <span class="font-[handjet] font-black tracking-wider invert">IDM</span>
+                        <span class="font-[handjet] font-black tracking-wider invert">-</span>
+                        <span class="font-[handjet] font-black tracking-wider invert">VTON</span>
+                    </h1>
+                    <div id="transition-circle" class="absolute top-1/2 left-1/2 -translate-x-1/2  origin-center  bg-white w-[2vw] aspect-square z-[99]"></div>
+                    <!-- <div class="center-box bg-black absolute left-[47%] top-[52%] md:top-[55%]   aspect-video w-[1vw] md:w-[1vw]"></div> -->
                     <p class="text-center hidden text-sm w-3/4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex consequuntur laudantium obcaecati minima qui earum officia consequatur, laboriosam libero sequi. Cum dolore earum, dolorem voluptatem hic totam sapiente non iste, architecto, alias aspernatur quasi assumenda.</p>
                 </div>
             </div>
         </div>
-        <div class="h-screen bg-white"></div>
+        <div class="h-screen  relative w-full">
+            <div id="glitchImgs" class="absolute w-full h-full justify-center items-center flex z-[8] top-0 left-1/2 -translate-x-1/2">
+                <img id="img4" class="absolute g-img opacity-0  h-full object-top" src="./assets/images/model1_swim-removebg-preview.png" alt="">
+                <img id="img3" class="absolute g-img opacity-0  h-full object-top" src="./assets/images/model1_brown_jac-removebg-preview.png" alt="">
+                <img id="img2" class="absolute g-img opacity-0  h-full object-top" src="./assets/images/model1.png" alt="">
+                <img id="img1" class="absolute g-img opacity-0  h-full object-top" src="./assets/images/model1_brown_fur-removebg-preview.png" alt="">
+            </div>
+        </div>
     </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
