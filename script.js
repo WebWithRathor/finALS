@@ -1,47 +1,51 @@
+function minmap() {
 
-function minimap(){
-    let tl = gsap.timeline({
-        scrollTrigger:{
-            scroller:'body',
-            trigger:'.minimap',
-            start:'top 0%',
-            scrub:1,
-            markers:true,
-            pin:true
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            scroller: 'body',
+            trigger: '.minimap-wrapper',
+            start: 'top 0',
+            end:'top -200%',
+            scrub: 1,
+            snap: [0, 0.20, 0.40, 0.60, 0.80, 1.0]
         }
     })
 
-        tl.to(`.showimage .imgBox:nth-child(2)`,{
-            top:0
-        },'first')
-        .to('.img-box',{
-            translateY:"-=115%"
-        },'first')
-        .to(`.showimage .imgBox:nth-child(3)`,{
-            top:0
-        },'a')
-        .to('.img-box',{
-            translateY:"-=115%"
-        },'a')
-        .to(`.showimage .imgBox:nth-child(4)`,{
-            top:0
-        },'b')
-        .to('.img-box',{
-            translateY:"-=115%"
-        },'b')
-        .to(`.showimage .imgBox:nth-child(5)`,{
-            top:0
-        },'c')
-        .to('.img-box',{
-            translateY:"-=115%"
-        },'c')
-        .to(`.showimage .imgBox:nth-child(6)`,{
-            top:0
-        },'d')
-        .to('.img-box',{
-            translateY:"-=115%"
-        },'d')
+    gsap.set('.minimap .images .img-box', {
+        y: '200%'
+    })
 
+    tl
+        .to('.minimap  .imgBox', {
+            y: '-=105%'
+        }, 'a')
+        .to('.minimap .images .img-box', {
+            y: '-=118%'
+        }, 'a')
+        .to('.minimap .images .img-box', {
+            y: '-=118%'
+        }, 'b')
+        .to('.minimap  .imgBox', {
+            y: '-=105%'
+        }, 'b')
+        .to('.minimap .images .img-box', {
+            y: '-=118%'
+        }, 'c')
+        .to('.minimap  .imgBox', {
+            y: '-=105%'
+        }, 'c')
+        .to('.minimap .images .img-box', {
+            y: '-=118%'
+        }, 'd')
+        .to('.minimap  .imgBox', {
+            y: '-=105%'
+        }, 'd')
+        .to('.minimap .images .img-box', {
+            y: '-=118%'
+        }, 'e')
+        .to('.minimap  .imgBox', {
+            y: '-=95%'
+        }, 'e')
 }
 
-minimap();
+minmap();
