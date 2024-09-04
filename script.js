@@ -125,16 +125,9 @@ function imgGlitchEffect() {
         .to('#img3', {
             opacity: 0,
             // duration: 1,
-        }, "i2")
+        })
 
-        .to('#img4', {
-            opacity: 1,
-            duration: 1,
-        }, "i2")
-        .to('#img4', {
-            opacity: 0,
-            // duration:0
-        });
+       
 
 
 }
