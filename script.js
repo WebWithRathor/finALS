@@ -87,6 +87,17 @@ function footerAnimation() {
         stagger: 0.05,
         duration: 2,
     })
+    gsap.to('.ending-page .overlay', {
+        y : -2,
+        duration: 1,
+        scrollTrigger: {
+            trigger: '.ending-page',
+            start: 'top 20%',
+            end: '100% top',
+            scrub: true,
+            // markers :true,
+        }
+    })
     gsap.to('.top-section, .middle-text', {
         transform: 'translateY(0)',
         duration: 1,
@@ -112,35 +123,14 @@ function imgGlitchEffect() {
 
     tl
         .to('#img1', {
-            opacity: 1,
-            duration: 1,
-        })
-        .to('#img1', {
             opacity: 0,
-            // duration: 1,
-        }, "i0")
-
+            duration: 1,
+        },'i0')
         .to('#img2', {
             opacity: 1,
             duration: 1,
         }, "i0")
-        .to('#img2', {
-            opacity: 0,
-            // duration: 1,
-        }, "i1")
-
-        .to('#img3', {
-            opacity: 1,
-            duration: 1,
-        }, "i1")
-        .to('#img3', {
-            opacity: 0,
-            // duration: 1,
-        })
-
-
-
-
+        
 }
 imgGlitchEffect()
 
@@ -172,13 +162,13 @@ function minmap() {
         }, 'START')
 
         .to('.minimap  .imgBox', {
-            y: '-=105%'
+            y: '-=100%'
         }, 'a')
         .to('.minimap .images .img-box', {
-            y: '-=115%'
+            y: '-=135%'
         }, 'a')
         .to('.minimap .images .img-box', {
-            y: '-=115%'
+            y: '-=135%'
         }, 'b')
         .to('.minimap  .imgBox', {
             y: '-=105%'
@@ -394,3 +384,183 @@ function stepsAnim(){
 
     }
 stepsAnim();
+
+
+
+function introAnime(){
+
+    const loading = document.querySelector('.loading')
+    var x = Number(loading.innerText.split('%')[0])
+
+    const loadingInterval = setInterval(() => {
+        x += Math.floor(Math.random()*20)
+        loading.innerText = x + '%';
+        if(x >=100){
+            loading.innerText = '100%';
+            gsap.to('.intro',{
+                transform:'rotateX(-70deg)',
+                duration:.8,
+                top:'60%',
+            })
+            clearInterval(loadingInterval)
+        }
+    }, 100);
+
+
+
+}
+
+introAnime();
+
+
+function cursor(){
+    const canvas = document.querySelector("#canvas");
+    const ctx = canvas.getContext('2d');
+
+// for intro motion
+let mouseMoved = false;
+
+const pointer = {
+    x: .5 * window.innerWidth,
+    y: .5 * window.innerHeight,
+}
+const params = {
+    pointsNumber: 40,
+    widthFactor: .3,
+    mouseThreshold: .6,
+    spring: .4,
+    friction: .5
+};
+
+const trail = new Array(params.pointsNumber);
+for (let i = 0; i < params.pointsNumber; i++) {
+    trail[i] = {
+        x: pointer.x,
+        y: pointer.y,
+        dx: 0,
+        dy: 0,
+    }
+}
+
+window.addEventListener("click", e => {
+    updateMousePosition(e.clientX, e.clientY);
+});
+window.addEventListener("mousemove", e => {
+    mouseMoved = true;
+    updateMousePosition(e.clientX, e.clientY);
+});
+window.addEventListener("touchmove", e => {
+    mouseMoved = true;
+    updateMousePosition(e.targetTouches[0].pageX, e.targetTouches[0].pageY);
+});
+
+function updateMousePosition(eX, eY) {
+    pointer.x = eX;
+    pointer.y = eY;
+}
+
+setupCanvas();
+update(0);
+window.addEventListener("resize", setupCanvas);
+
+
+function update(t) {
+
+    // for intro motion
+    if (!mouseMoved) {
+        pointer.x = (.5 + .3 * Math.cos(.002 * t) * (Math.sin(.005 * t))) * window.innerWidth;
+        pointer.y = (.5 + .2 * (Math.cos(.005 * t)) + .1 * Math.cos(.01 * t)) * window.innerHeight;
+    }
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    trail.forEach((p, pIdx) => {
+        const prev = pIdx === 0 ? pointer : trail[pIdx - 1];
+        const spring = pIdx === 0 ? .4 * params.spring : params.spring;
+        p.dx += (prev.x - p.x) * spring;
+        p.dy += (prev.y - p.y) * spring;
+        p.dx *= params.friction;
+        p.dy *= params.friction;
+        p.x += p.dx;
+        p.y += p.dy;
+    });
+
+    ctx.lineCap = "round";
+    ctx.strokeStyle = "white"; 
+	 ctx.beginPath();
+    ctx.moveTo(trail[0].x, trail[0].y);
+
+    for (let i = 1; i < trail.length - 1; i++) {
+        const xc = .5 * (trail[i].x + trail[i + 1].x);
+        const yc = .5 * (trail[i].y + trail[i + 1].y);
+        ctx.quadraticCurveTo(trail[i].x, trail[i].y, xc, yc);
+        ctx.lineWidth = params.widthFactor * (params.pointsNumber - i);
+        ctx.stroke();
+    }
+    ctx.lineTo(trail[trail.length - 1].x, trail[trail.length - 1].y);
+    ctx.stroke();
+    
+    window.requestAnimationFrame(update);
+}
+
+function setupCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+}
+cursor();
+
+
+
+function openCloseMenu() {
+    let isOpen = false;
+    document.querySelector('#menu-icon').addEventListener('click', () => {
+        console.log("hey")
+      if (!isOpen) {
+        const tl = gsap.timeline()
+        tl.to('.menu-scroll', {
+          opacity: 1,
+          duration: 0.8
+        }, 'x')
+          .to('.menu-left', {
+            transform: 'translate(0%)',
+            duration: .8,
+            opacity: 1
+          }, 'x')
+          .to('.menu-right', {
+            transform: 'translate(0%)',
+            duration: .8,
+            opacity: 1
+          }, 'x')
+          .to('.menu-page', {
+            top: '0%',
+            duration: .6
+          }, 'x')
+          isOpen = true;
+      } else {
+        const tl = gsap.timeline()
+        tl.to('.menu-scroll', {
+          // opacity: 0,
+          duration: 0.8
+        }, 'x')
+          .to('.menu-left', {
+            transform: 'translate(-100%)',
+            duration: .8,
+            opacity: 0
+          }, 'x')
+          .to('.menu-right', {
+            transform: 'translate(100%)',
+            duration: .8,
+            opacity: 0
+          }, 'x')
+          .to('.menu-page', {
+            top: '-120%',
+            duration: .6
+          }, 'x')
+          isOpen = false;
+  
+      }
+  
+    })
+  }
+
+  openCloseMenu()
