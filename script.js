@@ -162,13 +162,13 @@ function minmap() {
         }, 'START')
 
         .to('.minimap  .imgBox', {
-            y: '-=105%'
+            y: '-=100%'
         }, 'a')
         .to('.minimap .images .img-box', {
-            y: '-=115%'
+            y: '-=135%'
         }, 'a')
         .to('.minimap .images .img-box', {
-            y: '-=115%'
+            y: '-=135%'
         }, 'b')
         .to('.minimap  .imgBox', {
             y: '-=105%'
