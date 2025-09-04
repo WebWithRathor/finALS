@@ -12,47 +12,54 @@
 <body>
     <div class="main bg-black text-[#AAA9AC]">
 
-        
+
         <div id="menu-cont"
-      class="menu-page fixed top-[100%] z-[99] overflow-hidden w-full md:w-1/2 right-0 h-screen bg-black justify-center flex flex-col  items-center gap-4 md:gap-4">
-      <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Teams</h1>
-      <hr class="h-1 w-[80%] opacity-30">
-      <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Docs</h1>
-      <hr class="h-1 w-[80%] opacity-30">
-      <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Docs</h1>
-      <hr class="h-1 w-[80%] opacity-30">
-      <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Contact</h1>
-      <hr class="h-1 w-[80%] opacity-30">
-      <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Repo</h1>
-      <hr class="h-1 w-[80%] opacity-30">
-      <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Working</h1>
-      <hr class="h-1 w-[80%] opacity-30">
-      
-      
-    </div>
+            class="menu-page fixed top-[100%] z-[99] overflow-hidden w-full md:w-1/2 right-0 h-screen bg-black justify-center flex flex-col  items-center gap-4 md:gap-4">
+            <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Teams</h1>
+            <hr class="h-1 w-[80%] opacity-30">
+            <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Docs</h1>
+            <hr class="h-1 w-[80%] opacity-30">
+            <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Docs</h1>
+            <hr class="h-1 w-[80%] opacity-30">
+            <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Contact</h1>
+            <hr class="h-1 w-[80%] opacity-30">
+            <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Repo</h1>
+            <hr class="h-1 w-[80%] opacity-30">
+            <h1 class="text-4xl uppercase font-[anton] cursor-pointer text-hover">Working</h1>
+            <hr class="h-1 w-[80%] opacity-30">
 
-    <nav class="fixed w-full top-0  md:py-[2vw] py-4 px-[4vw] z-[100] justify-between flex items-center">
-        <h1 class="font-[handjet] font-black text-xl">IDM-VTON</h1>
-        <div id="btn-wrap" class="w-40 md:block hidden relative backdrop-blur-lg">
-            <button class="absolute w-full text-white h-full md:px-6 md:py-2 uppercase">Try Demo</button>
-            <svg id="btn-svg" class="w-40" viewBox="0 0 607 193" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="1" y="1" class="w-full h-48" stroke="#aaa9ac"  />
-            </svg>
-          </div>
 
-        <div id="menu-icon" class="flex items-center relative flex-col md:gap-1 gap-1 cursor-pointer  p-1 w-[30px] group">
-            <div class="w-[16px] md:h-[3px] h-[2px] shrink-0 bg-white group-hover:w-[28px] duration-200 rounded-full"></div>
-            <div class="w-[22px] md:h-[3px] h-[2px] shrink-0 bg-white group-hover:w-[22px] duration-200 rounded-full"></div>
-            <div class="w-[28px] md:h-[3px] h-[2px] shrink-0 bg-white group-hover:w-[16px] duration-200 rounded-full"></div>
         </div>
-    </nav>
+
+        <nav class="fixed w-full top-0  md:py-[2vw] py-4 px-[4vw] z-[100] justify-between flex items-center">
+            <h1 class="font-[handjet] font-black text-xl">IDM-VTON</h1>
+            <div id="btn-wrap" class="w-40 md:block hidden relative backdrop-blur-lg">
+                <button class="absolute w-full text-white h-full md:px-6 md:py-2 uppercase">Try Demo</button>
+                <svg id="btn-svg" class="w-40" viewBox="0 0 607 193" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="1" class="w-full h-48" stroke="#aaa9ac" />
+                </svg>
+            </div>
+
+            <div id="menu-icon"
+                class="flex items-center relative flex-col md:gap-1 gap-1 cursor-pointer  p-1 w-[30px] group">
+                <div
+                    class="w-[16px] md:h-[3px] h-[2px] shrink-0 bg-white group-hover:w-[28px] duration-200 rounded-full">
+                </div>
+                <div
+                    class="w-[22px] md:h-[3px] h-[2px] shrink-0 bg-white group-hover:w-[22px] duration-200 rounded-full">
+                </div>
+                <div
+                    class="w-[28px] md:h-[3px] h-[2px] shrink-0 bg-white group-hover:w-[16px] duration-200 rounded-full">
+                </div>
+            </div>
+        </nav>
 
 
         <canvas id="canvas" class="hidden md:block"></canvas>
 
         <div class="introParent h-screen w-full fixed top-0 z-[200] pointer-events-none">
             <div class="intro absolute top-0 h-[100vh] w-full flex justify-center items-center bg-zinc-400">
-                <div class="flex gap-2"> 
+                <div class="flex gap-2">
                     <h1 class="text-3xl text-zinc-800">Loading you experience</h1>
                     <h1 class="loading text-3xl text-zinc-800">1%</h1>
                 </div>
@@ -61,47 +68,61 @@
 
 
         <div class="h-screen w-full top-0 relative z-[92] overflow-hidden">
-            <spline-viewer class="hidden md:block" url="https://prod.spline.design/ueHV1l1cTbnxRS2X/scene.splinecode"></spline-viewer>
-            <spline-viewer class="block md:hidden" url="https://prod.spline.design/TIKiL6iPEOvNLCEI/scene.splinecode"></spline-viewer>
+            <spline-viewer class="hidden md:block"
+                url="https://prod.spline.design/ueHV1l1cTbnxRS2X/scene.splinecode"></spline-viewer>
+            <spline-viewer class="block md:hidden"
+                url="https://prod.spline.design/TIKiL6iPEOvNLCEI/scene.splinecode"></spline-viewer>
             <div class="logoHidder absolute"></div>
         </div>
-<div class="mainstepwrapper h-[400vh] relative">
-    
-    <div class="steps sticky top-0 h-screen px-10 text-center ">
-        <div id="skew" class=" pt-20 w-full overflow-hidden">
-            <div
-                class="bar skew-bar text-7xl uppercase flex w-screen justify-center  overflow-hidden font-serif py-3 ">
-                <h1 class="w-max px-10 text-center font-[anton] text-[12vw] shrink-0">IDM-VTON Virtual Dressing</h1>
-                <h1 class="w-max px-10 text-center font-[anton] text-[12vw] shrink-0">IDM-VTON Virtual Dressing</h1>
-                <h1 class="w-max px-10 text-center font-[anton] text-[12vw] shrink-0">IDM-VTON Virtual Dressing</h1>
-                <h1 class="w-max px-10 text-center font-[anton] text-[12vw] shrink-0">IDM-VTON Virtual Dressing</h1>
-                <h1 class="w-max px-10 text-center font-[anton] text-[12vw] shrink-0">IDM-VTON Virtual Dressing</h1>
+        <div class="mainstepwrapper h-[400vh] relative">
+
+            <div class="steps sticky top-0 h-screen px-10 text-center ">
+                <div id="skew" class=" pt-20 w-full overflow-hidden">
+                    <div
+                        class="bar skew-bar text-7xl uppercase flex w-screen justify-center  overflow-hidden font-serif py-3 ">
+                        <h1 class="w-max px-10 text-center font-[anton] text-[12vw] shrink-0">IDM-VTON Virtual Dressing
+                        </h1>
+                        <h1 class="w-max px-10 text-center font-[anton] text-[12vw] shrink-0">IDM-VTON Virtual Dressing
+                        </h1>
+                        <h1 class="w-max px-10 text-center font-[anton] text-[12vw] shrink-0">IDM-VTON Virtual Dressing
+                        </h1>
+                        <h1 class="w-max px-10 text-center font-[anton] text-[12vw] shrink-0">IDM-VTON Virtual Dressing
+                        </h1>
+                        <h1 class="w-max px-10 text-center font-[anton] text-[12vw] shrink-0">IDM-VTON Virtual Dressing
+                        </h1>
+                    </div>
+                </div>
+                <div class="h-[50vh] steps-wrapper overflow-hidden relative">
+                    <div class="steps-text1 relative h-[50vh] flex items-center bg-black ">
+                        <p class="absolute w-[35%] left-[65%] z-0">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Nihil officia eveniet praesentium, eius et modi necessitatibus ullam a sed tenetur,
+                            nisi veritatis illum similique nobis libero, tempora molestiae laborum minus.
+                        <h1 class="font-[anton] text-[20vw] relative  bg-black leading-[50vh]">1.Select</h1>
+                        </p>
+                    </div>
+                    <div class="steps-text2 relative h-[50vh] flex items-center bg-black ">
+                        <p class="absolute w-[35%] left-[65%] z-0">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Nihil officia eveniet praesentium, eius et modi necessitatibus ullam a sed tenetur,
+                            nisi veritatis illum similique nobis libero, tempora molestiae laborum minus.
+                        <h1 class="font-[anton] text-[15vw] relative  bg-black leading-[50vh]">2.Uploads</h1>
+                        </p>
+                    </div>
+                    <div class="steps-text3 relative h-[50vh] flex items-center bg-black ">
+                        <p class="absolute w-[35%] left-[65%] z-0">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Nihil officia eveniet praesentium, eius et modi necessitatibus ullam a sed tenetur,
+                            nisi veritatis illum similique nobis libero, tempora molestiae laborum minus.
+                        <h1 class="font-[anton] text-[20vw] relative  bg-black leading-[50vh]">3.Try On<< /h1>
+                                </p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="h-[50vh] steps-wrapper overflow-hidden relative">
-            <div class="steps-text1 relative h-[50vh] flex items-center bg-black ">
-                <p class="absolute w-[35%] left-[65%] z-0" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil officia eveniet praesentium, eius et modi necessitatibus ullam a sed tenetur, nisi veritatis illum similique nobis libero, tempora molestiae laborum minus.
-                <h1 class="font-[anton] text-[20vw] relative  bg-black leading-[50vh]">1.Select</h1>
-                </p>
-            </div>
-            <div class="steps-text2 relative h-[50vh] flex items-center bg-black ">
-                <p class="absolute w-[35%] left-[65%] z-0" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil officia eveniet praesentium, eius et modi necessitatibus ullam a sed tenetur, nisi veritatis illum similique nobis libero, tempora molestiae laborum minus.
-                <h1 class="font-[anton] text-[15vw] relative  bg-black leading-[50vh]">2.Uploads</h1>
-                </p>
-            </div>
-            <div class="steps-text3 relative h-[50vh] flex items-center bg-black ">
-                <p class="absolute w-[35%] left-[65%] z-0" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil officia eveniet praesentium, eius et modi necessitatibus ullam a sed tenetur, nisi veritatis illum similique nobis libero, tempora molestiae laborum minus.
-                <h1 class="font-[anton] text-[20vw] relative  bg-black leading-[50vh]">3.Try On<</h1>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
         <div class="landingPage relative h-[250vh] ">
             <div class="sticky top-0 h-screen bg-transparent overflow-hidden flex">
                 <div
                     class="frontPage overflow-hidden relative h-screen flex-shrink-0 w-full px-[8vw] md:px-[4vw] flex flex-col py-[6vw]  justify-between gap-5">
-                    <p class=" md:text-[5vw] text-[15vw] mt-32 w-[50%] leading-none md:mt-10">Your Virtual Dressing Room, Anytime Anywhere</p>
+                    <p class=" md:text-[5vw] text-[15vw] mt-32 w-[50%] leading-none md:mt-10">Your Virtual Dressing
+                        Room, Anytime Anywhere</p>
                     <div id="glitchImgs"
                         class="absolute w-full h-full justify-center items-center flex z-[-1] top-0 left-[60%] -translate-x-1/2">
 
@@ -112,7 +133,7 @@
                     </div>
 
                     <h1
-                        class="main-text pointer-events-none z-[5] px-5 md:px-10 absolute hidden left-1/2 top-1/2 -translate-x-1/2 -translate-y-[40%] font-[handjet] leading-none text-[26vw] w-full flex items-center justify-center">
+                        class="main-text pointer-events-none z-[5] px-5 md:px-10 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[40%] font-[handjet] leading-none text-[26vw] w-full flex items-center justify-center">
                         <span class="font-[handjet] font-black tracking-wider text-black/[1]">IDM</span>
                         <span class="font-[handjet] font-black tracking-wider text-black/[1]">-</span>
                         <span class="font-[handjet] font-black tracking-wider text-black/[1]">VTON</span>
@@ -120,7 +141,8 @@
                     <div id="transition-circle"
                         class="absolute hidden pointer-events-none top-1/2 left-1/2 -translate-x-1/2  origin-center  bg-black w-[2vw] aspect-square z-[99]">
                     </div>
-                    <p class="steps-text-center hidden text-sm w-3/4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <p class="steps-text-center hidden text-sm w-3/4">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit.
                         Ex consequuntur laudantium obcaecati minima qui earum officia consequatur, laboriosam libero
                         sequi. Cum dolore earum, dolorem voluptatem hic totam sapiente non iste, architecto, alias
                         aspernatur quasi assumenda.</p>
@@ -160,8 +182,8 @@
                     src="./assets/images/model1_swim-removebg-preview.png" alt="">
                 <img id="img3" class="absolute g-img opacity-0 md:w-max bottom-0 w-full object-cover h-full"
                     src="./assets/images/model1_brown_jac-removebg-preview.png" alt="">
-                <img id="img2" class="absolute g-img opacity-0 md:w-max bottom-0 w-full object-cover h-full" src="./assets/images/model1.png"
-                    alt="">
+                <img id="img2" class="absolute g-img opacity-0 md:w-max bottom-0 w-full object-cover h-full"
+                    src="./assets/images/model1.png" alt="">
                 <img id="img1" class="absolute g-img opacity-0 md:w-max bottom-0 w-full object-cover h-full"
                     src="./assets/images/model1_brown_fur-removebg-preview.png" alt="">
             </div>
@@ -169,12 +191,14 @@
         <div class="minimap-wrapper h-[300vh] relative w-full ">
             <div
                 class="minimap sticky top-0 overflow-hidden h-screen flex w-full px-[8vw] gap-5  md:px-32 md:py-20 md:gap-20">
-                <div class="virtual-photu top-0 left-0 absolute h-screen z-[9]  w-full px-[8vw] md:p-10 flex items-center">
+                <div
+                    class="virtual-photu top-0 left-0 absolute h-screen z-[9]  w-full px-[8vw] md:p-10 flex items-center">
                     <h1 class="font-[anton]  text-[20vw] md:text-[10vw] md:leading-[22vh] leading-[11vh]">Explore The
                         <br> Try-On Gallery
                     </h1>
                 </div>
-                <div class="details absolute md:w-[20vw] bottom-10 font-[anton] md:px-0 px-[8vw] md:right-10 text-right">
+                <div
+                    class="details absolute md:w-[20vw] bottom-10 font-[anton] md:px-0 px-[8vw] md:right-10 text-right">
                     <h1 class="text-4xl mb-5">Virtual Try-on <br> in the Wild</h1>
                     <h1 class="text-sm">Virtual try-on uses internet images and customizes TryonNet for high-quality,
                         consistent results in diverse scenarios.</h1>
@@ -220,15 +244,18 @@
             <div
                 class="lastsecond-page overflow-x-hidden relative z-[90] h-[70vh] md:h-[60vh] w-screen flex flex-col items-center justify-center px-5 md:px-10">
                 <div class="center-div flex flex-col gap-5 items-center justify-center relative z-10">
-                    <h1 class="text-4xl md:text-7xl font-bold text-center">Dive Into the <br class="md:hidden">Future of Fashion
+                    <h1 class="text-4xl md:text-7xl font-bold text-center">Dive Into the <br class="md:hidden">Future of
+                        Fashion
                         <br> with IDM
-                        VTON</h1>
-                        <div id="btn-wrap" class="w-40 md:block hidden relative z-[90] backdrop-blur-lg">
-                            <button class="absolute w-full text-white h-full md:px-6 md:py-2 uppercase">Explore</button>
-                            <svg id="btn-svg" class="w-40" viewBox="0 0 607 193" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <rect x="1" y="1" class="w-full h-48" stroke="#aaa9ac"  />
-                            </svg>
-                          </div>
+                        VTON
+                    </h1>
+                    <div id="btn-wrap" class="w-40 md:block hidden relative z-[90] backdrop-blur-lg">
+                        <button class="absolute w-full text-white h-full md:px-6 md:py-2 uppercase">Explore</button>
+                        <svg id="btn-svg" class="w-40" viewBox="0 0 607 193" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="1" class="w-full h-48" stroke="#aaa9ac" />
+                        </svg>
+                    </div>
                 </div>
             </div>
             <footer
